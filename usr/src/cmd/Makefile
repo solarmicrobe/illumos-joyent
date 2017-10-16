@@ -477,6 +477,7 @@ COMMON_SUBDIRS=		\
 	zlook		\
 	zonestat	\
 	zstreamdump	\
+	zstd		\
 	ztest
 
 i386_SUBDIRS=		\

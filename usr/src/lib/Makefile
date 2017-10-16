@@ -254,6 +254,7 @@ SUBDIRS +=				\
 	libzoneinfo	\
 	libzonestat	\
 	libzpool	\
+	libzstd		\
 	madv		\
 	mpapi		\
 	mpss		\

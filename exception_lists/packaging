@@ -1027,3 +1027,11 @@ lib/llib-lcustr.ln
 #
 opt/onbld/bin/i386/smatch	i386
 opt/onbld/share/smatch		i386
+
+#
+# zstd is private
+#
+usr/include/zstd.h
+usr/lib/amd64/libzstd.so		i386
+usr/lib/sparcv9/libzstd.so		sparc
+usr/lib/libzstd.so
