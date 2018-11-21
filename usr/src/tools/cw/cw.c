@@ -26,6 +26,8 @@
 /*
  * Copyright 2010 Sun Microsystems, Inc.  All rights reserved.
  * Use is subject to license terms.
+ *
+ * Copyright 2018 Joyent, Inc.
  */
 
 /*
@@ -291,7 +293,8 @@ struct aelist {
 
 typedef enum {
 	GNU,
-	SUN
+	SUN,
+	SMATCH
 } compiler_style_t;
 
 typedef struct {
@@ -597,6 +600,14 @@ do_gcc(cw_ictx_t *ctx)
 		newae(ctx->i_ae, "--version");
 		return;
 	}
+
+#if 0
+	// UGH
+	if (ctx->i_compiler->c_style == SMATCH) {
+		newae(ctx->i_ae, "-p=illumos");
+		newae(ctx->i_ae, "--enable=168");
+	}
+#endif
 
 	newae(ctx->i_ae, "-fident");
 	newae(ctx->i_ae, "-finline");
@@ -1439,6 +1450,12 @@ prepctx(cw_ictx_t *ctx)
 	case GNU:
 		do_gcc(ctx);
 		break;
+	case SMATCH:
+		/*
+		 * smatch can basically take the same options as gcc.
+		 */
+		do_gcc(ctx);
+		break;
 	}
 }
 
@@ -1610,13 +1627,16 @@ parse_compiler(const char *spec, cw_compiler_t *compiler)
 		errx(1, "Compiler is missing a style: %s", spec);
 
 	if ((strcasecmp(token, "gnu") == 0) ||
-	    (strcasecmp(token, "gcc") == 0))
+	    (strcasecmp(token, "gcc") == 0)) {
 		compiler->c_style = GNU;
-	else if ((strcasecmp(token, "sun") == 0) ||
-	    (strcasecmp(token, "cc") == 0))
+	} else if ((strcasecmp(token, "sun") == 0) ||
+	    (strcasecmp(token, "cc") == 0)) {
 		compiler->c_style = SUN;
-	else
+	} else if ((strcasecmp(token, "smatch") == 0)) {
+		compiler->c_style = SMATCH;
+	} else {
 		errx(1, "unknown compiler style: %s", token);
+	}
 
 	if (tspec != NULL)
 		errx(1, "Excess tokens in compiler: %s", spec);
