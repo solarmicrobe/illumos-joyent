@@ -32,7 +32,7 @@ include ../Makefile.cmd
 
 CFLAGS +=	$(CCVERBOSE)
 CERRWARN +=	-_gcc=-Wno-parentheses
-LDLIBS += -ldevice -l devinfo
+LDLIBS += -ldevice -ldevinfo
 
 all: $(PROG)
 
