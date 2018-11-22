@@ -596,25 +596,6 @@ do_gcc(cw_ictx_t *ctx)
 	char *nameflag;
 	int mflag = 0;
 
-	if (ctx->i_flags & CW_F_PROG) {
-		newae(ctx->i_ae, "--version");
-		return;
-	}
-
-	if (ctx->i_compiler->c_style == SMATCH) {
-	// FIXME: should be in exception file as default
-		/*
-		 * Such smatch arguments *must* come first in the argv.
-		 */
-		newae(ctx->i_ae, "--disable=uninitialized");
-	// FIXME: should be in makefiles
-		newae(ctx->i_ae, "-Wno-non-ansi-function-declaration");
-#if 0
-		newae(ctx->i_ae, "-p=illumos");
-		newae(ctx->i_ae, "--enable=168");
-#endif
-	}
-
 	newae(ctx->i_ae, "-fident");
 	newae(ctx->i_ae, "-finline");
 	newae(ctx->i_ae, "-fno-inline-functions");
@@ -1332,6 +1313,43 @@ do_gcc(cw_ictx_t *ctx)
 }
 
 static void
+do_smatch(cw_ictx_t *ctx)
+{
+	if (ctx->i_flags & CW_F_PROG) {
+		newae(ctx->i_ae, "--version");
+		return;
+	}
+
+	if (ctx->i_compiler->c_style == SMATCH) {
+	// FIXME: should be in exception file as default
+		/*
+		 * Such smatch arguments *must* come first in the argv.
+		 */
+		newae(ctx->i_ae, "--disable=uninitialized");
+
+		/*
+		 * Now the sparse-level things we need to disable.
+		 */
+	// FIXME: should be in makefiles
+		/* disable warnings about e.g. "int a = 0x100000000" */
+		newae(ctx->i_ae, "-Wno-big-constants");
+		/* we have lots of legacy "void foo();" in headers */
+		newae(ctx->i_ae, "-Wno-non-ansi-function-declaration");
+		/* we allow VLAs */
+		newae(ctx->i_ae, "-Wno-vla");
+#if 0
+		newae(ctx->i_ae, "-p=illumos");
+		newae(ctx->i_ae, "--enable=168");
+#endif
+	}
+
+	/*
+	 * smatch can handle gcc's options.
+	 */
+	do_gcc(ctx);
+}
+
+static void
 do_cc(cw_ictx_t *ctx)
 {
 	int in_output = 0, seen_o = 0, c_files = 0;
@@ -1457,10 +1475,7 @@ prepctx(cw_ictx_t *ctx)
 		do_gcc(ctx);
 		break;
 	case SMATCH:
-		/*
-		 * smatch can basically take the same options as gcc.
-		 */
-		do_gcc(ctx);
+		do_smatch(ctx);
 		break;
 	}
 }
