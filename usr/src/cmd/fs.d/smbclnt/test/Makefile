@@ -43,7 +43,7 @@ INST_CMDS = $(PROG:%=$(TESTDIR)/%)
 CPPFLAGS += -I../../../../uts/common
 CPPFLAGS += -I../../../../lib/libsmbfs
 
-LDLIBS += -R '$$ORIGIN/../../../usr/lib'
+LDLIBS += -R'$$ORIGIN/../../../usr/lib'
 LDLIBS += -lsmbfs
 LINTLIBS= -L$(ROOTLIB) -lsmbfs
 
