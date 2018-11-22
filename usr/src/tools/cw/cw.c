@@ -601,13 +601,19 @@ do_gcc(cw_ictx_t *ctx)
 		return;
 	}
 
-#if 0
-	// UGH
 	if (ctx->i_compiler->c_style == SMATCH) {
+	// FIXME: should be in exception file as default
+		/*
+		 * Such smatch arguments *must* come first in the argv.
+		 */
+		newae(ctx->i_ae, "--disable=uninitialized");
+	// FIXME: should be in makefiles
+		newae(ctx->i_ae, "-Wno-non-ansi-function-declaration");
+#if 0
 		newae(ctx->i_ae, "-p=illumos");
 		newae(ctx->i_ae, "--enable=168");
-	}
 #endif
+	}
 
 	newae(ctx->i_ae, "-fident");
 	newae(ctx->i_ae, "-finline");
