@@ -1320,24 +1320,16 @@ do_smatch(cw_ictx_t *ctx)
 		return;
 	}
 
-	if (ctx->i_compiler->c_style == SMATCH) {
-	// FIXME: should be in exception file as default
-		newae(ctx->i_ae, "--disable=uninitialized,check_check_deref");
+	/*
+	 * Some sources shouldn't run smatch at all.
+	 */
+	for (int i = 0; i < ctx->i_oldargc; i++) {
+		char *arg = ctx->i_oldargv[i];
 
-		/*
-		 * Now the sparse-level things we need to disable.
-		 */
-	// FIXME: should be in makefiles
-		/* disable warnings about e.g. "int a = 0x100000000" */
-		newae(ctx->i_ae, "-Wno-big-constants");
-		/* we have lots of legacy "void foo();" in headers */
-		newae(ctx->i_ae, "-Wno-non-ansi-function-declaration");
-		/* we allow VLAs */
-		newae(ctx->i_ae, "-Wno-vla");
-#if 0
-		newae(ctx->i_ae, "-p=illumos");
-		newae(ctx->i_ae, "--enable=168");
-#endif
+		if (strcmp(arg, "-_smatch=off") == 0) {
+			ctx->i_flags &= ~ (CW_F_EXEC | CW_F_ECHO);
+			return;
+		}
 	}
 
 	/*
