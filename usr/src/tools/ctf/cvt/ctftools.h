@@ -50,7 +50,7 @@ extern "C" {
  * system, to achieve that, we stub it out here and in all similar places to
  * give us a leg up.
  */
-#if __GNUC__ >= 4
+#if __GNUC__ >= 4 && !defined(__CHECKER__)
 #define	__builtin_stdarg_start(list, name)	__builtin_va_start(list, name)
 #endif
 
