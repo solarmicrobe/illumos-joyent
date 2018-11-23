@@ -1322,10 +1322,7 @@ do_smatch(cw_ictx_t *ctx)
 
 	if (ctx->i_compiler->c_style == SMATCH) {
 	// FIXME: should be in exception file as default
-		/*
-		 * Such smatch arguments *must* come first in the argv.
-		 */
-		newae(ctx->i_ae, "--disable=uninitialized");
+		newae(ctx->i_ae, "--disable=uninitialized,check_check_deref");
 
 		/*
 		 * Now the sparse-level things we need to disable.
