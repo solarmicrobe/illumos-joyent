@@ -227,6 +227,8 @@ CERRWARN += -_gcc=-Wno-missing-field-initializers
 $(RELEASE_BUILD)CERRWARN += -_gcc=-Wno-unused
 $(RELEASE_BUILD)CERRWARN += -_gcc=-Wno-empty-body
 
+CERRWARN += -_smatch=-p=illumos_kernel
+
 CSTD = $(CSTD_GNU99)
 
 CFLAGS_uts		=
