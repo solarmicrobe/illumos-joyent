@@ -45,6 +45,10 @@ CERRWARN += -_gcc=-Wno-implicit-function-declaration
 CERRWARN += -_gcc=-Wno-parentheses
 CERRWARN += -_gcc=-Wno-extra
 CERRWARN += -_gcc=-Wno-unused-variable
+
+# unknown type for func
+CERRWARN +=  $(DISABLE_SMATCH)
+
 MAPFILES = $(MAPFILE.INT) $(MAPFILE.NGB)
 LDFLAGS += $(MAPFILES:%=-M%)
 LDLIBS += -lgen

@@ -21,6 +21,8 @@
 # Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
+# Copyright (c) 2018, Joyent, Inc.
+#
 
 $(NOT_NATIVE)NATIVE_BUILD = $(POUND_SIGN)
 
@@ -91,6 +93,9 @@ CERRWARN	+= -_gcc=-Wno-unused-variable
 CERRWARN	+= -_gcc=-Wno-implicit-function-declaration
 YFLAGS		+= -d -v
 CFLAGS 		+= -D_FILE_OFFSET_BITS=64
+
+# dump_expr() is too hairy
+CERRWARN += $(DISABLE_SMATCH)
 
 $(ITM) :=	CFLAGS += $(GSHARED) $(C_PICFLAGS) $(ZTEXT) -h$@
 $(ITM) :=	CPPFLAGS += -D_REENTRANT 

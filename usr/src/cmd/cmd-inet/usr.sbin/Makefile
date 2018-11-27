@@ -110,6 +110,9 @@ CERRWARN += -_gcc=-Wno-char-subscripts
 CERRWARN += -_gcc=-Wno-extra
 CERRWARN += -_gcc=-Wno-address
 
+# "missing type for func"
+CERRWARN += $(DISABLE_SMATCH)
+
 #
 # Message catalog
 #

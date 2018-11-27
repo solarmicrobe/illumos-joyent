@@ -19,14 +19,13 @@
 #
 # CDDL HEADER END
 #
-#
 # Copyright (c) 1989 by Sun Microsystems, Inc.
-#
+# Copyright (c) 2018, Joyent, Inc.
 #
 LIBS=	a.a
 
-OBJS=	pnpsplit.o  copyn.o devtolin.o expand.o lintodev.o \
-	namtouid.o tmless.o tmsecs.o uidtonam.o substr.o 
+OBJS=	pnpsplit.o devtolin.o expand.o lintodev.o \
+	namtouid.o tmless.o tmsecs.o uidtonam.o substr.o
 SRCS=	$(OBJS:%.o=%.c)
 
 include	../../Makefile.cmd

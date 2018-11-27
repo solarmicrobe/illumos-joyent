@@ -63,6 +63,10 @@ CFLAGS64	+= -_gcc=-D__C99FEATURES__
 CFLAGS		+= -_gcc=-fno-strict-overflow
 CFLAGS64	+= -_gcc=-fno-strict-overflow
 
+# sparse currently has no _Complex support
+CFLAGS		+= $(DISABLE_SMATCH)
+CFLAGS64	+= $(DISABLE_SMATCH)
+
 $(DYNLIB) 	:= LDLIBS += -lc
 
 $(LINTLIB) 	:= SRCS = $(LIBMSRC)/$(LINTSRC)

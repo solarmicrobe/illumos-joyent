@@ -28,6 +28,10 @@
  * $FreeBSD$
  */
 
+/*
+ * Copyright (c) 2018, Joyent, Inc.
+ */
+
 #ifndef __NVME_H__
 #define __NVME_H__
 
@@ -1076,7 +1080,10 @@ struct nvme_health_information_page {
 	uint8_t			reserved2[296];
 } __packed __aligned(4);
 
+/* smatch hits this assert */
+#ifndef __CHECKER__
 _Static_assert(sizeof(struct nvme_health_information_page) == 512, "bad size for nvme_health_information_page");
+#endif
 
 struct nvme_firmware_page {
 

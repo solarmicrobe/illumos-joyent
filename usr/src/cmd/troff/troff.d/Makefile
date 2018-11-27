@@ -24,6 +24,7 @@
 #
 # cmd/troff/troff.d/Makefile
 #
+# Copyright (c) 2018, Joyent, Inc.
 
 include 	../../Makefile.cmd
 
@@ -49,6 +50,9 @@ CERRWARN +=	-_gcc=-Wno-unused-variable
 CERRWARN +=	-_gcc=-Wno-parentheses
 CERRWARN +=	-_gcc=-Wno-uninitialized
 CERRWARN +=	-_gcc=-Wno-extra
+
+# unknown type for func
+CERRWARN +=	$(DISABLE_SMATCH)
 
 #
 # For message catalog

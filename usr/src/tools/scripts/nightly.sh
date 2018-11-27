@@ -219,7 +219,7 @@ function build {
 	fi
 
 	echo "\n==== Build warnings ($LABEL) ====\n" >>$mail_msg_file
-	egrep -i warning: $SRC/${INSTALLOG}.out \
+	egrep -i 'warn:|warning:' $SRC/${INSTALLOG}.out \
 		| egrep -v '^tic:' \
 		| egrep -v "symbol (\`|')timezone' has differing types:" \
 		| egrep -v "parameter <PSTAMP> set to" \

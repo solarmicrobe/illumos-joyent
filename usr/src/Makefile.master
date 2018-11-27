@@ -448,14 +448,7 @@ $(RELEASE_BUILD)CERRWARN += -_gcc=-Wno-unused
 $(RELEASE_BUILD)CERRWARN += -_gcc=-Wno-empty-body
 
 CERRWARN += -_smatch=-p=illumos_user
-# These have way too many false positives to be useful
-CERRWARN += -_smatch=--disable=uninitialized,check_check_deref
-# disable warnings about e.g. "int a = 0x100000000"
-CERRWARN += -_smatch=-Wno-big-constants
-# we have lots of legacy "void foo();" in headers
-CERRWARN += -_smatch=-Wno-non-ansi-function-declaration
-# we allow VLAs
-CERRWARN += -_smatch=-Wno-vla
+include $(SRC)/Makefile.smatch
 
 #
 # turn warnings into errors (C++)

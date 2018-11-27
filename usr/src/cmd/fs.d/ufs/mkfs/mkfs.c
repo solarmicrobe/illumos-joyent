@@ -235,6 +235,7 @@
 #include	<sys/int_const.h>
 #include	<signal.h>
 #include	<sys/efi_partition.h>
+#include	<fslib.h>
 #include	"roll_log.h"
 
 #define	bcopy(f, t, n)    (void) memcpy(t, f, n)

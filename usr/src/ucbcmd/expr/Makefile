@@ -21,6 +21,7 @@
 # Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
+# Copyright (c) 2018, Joyent, Inc.
 
 PROG= expr
 
@@ -32,11 +33,14 @@ CERRWARN +=	-_gcc=-Wno-unused-label
 CERRWARN +=	-_gcc=-Wno-extra
 CERRWARN +=	-_gcc=-Wno-char-subscripts
 
+# missing function prototypes
+CERRWARN += $(DISABLE_SMATCH)
+
 LDFLAGS +=	$(MAPFILE.NGB:%=-M%)
 
 .KEEP_STATE:
 
-all: $(PROG) 
+all: $(PROG)
 
 install: all $(ROOTPROG)
 

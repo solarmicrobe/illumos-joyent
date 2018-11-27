@@ -29,6 +29,9 @@ CFLAGS +=	$(CCVERBOSE)
 LDLIBS +=	-ldevinfo
 CSTD=	$(CSTD_GNU99)
 
+# error: cannot size expression
+CERRWARN += $(DISABLE_SMATCH)
+
 all: $(PROG)
 
 $(PROG): $(OBJS)

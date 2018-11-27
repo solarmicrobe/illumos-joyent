@@ -22,6 +22,7 @@
 # Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
+# Copyright (c) 2018, Joyent, Inc.
 
 PROG= rusage
 
@@ -35,6 +36,9 @@ LDLIBS +=  -L$(ROOT)/usr/ucblib -R /usr/ucblib -lucb
 
 CPPFLAGS = -I$(INC1) $(CPPFLAGS.master)
 CERRWARN += -_gcc=-Wno-implicit-function-declaration
+
+# missing prototypes
+CERRWARN += $(DISABLE_SMATCH)
 
 .KEEP_STATE:
 

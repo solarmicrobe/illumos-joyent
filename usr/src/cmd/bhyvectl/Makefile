@@ -37,6 +37,9 @@ LDLIBS +=	-lvmmapi
 
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
+# main() is too hairy for smatch
+bhyvectl.o := CERRWARN += $(DISABLE_SMATCH)
+
 all: $(PROG)
 
 $(PROG): $(OBJS)

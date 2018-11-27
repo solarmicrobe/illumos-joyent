@@ -1,0 +1,30 @@
+#
+# This file and its contents are supplied under the terms of the
+# Common Development and Distribution License ("CDDL"), version 1.0.
+# You may only use this file in accordance with the terms of version
+# 1.0 of the CDDL.
+#
+# A full copy of the text of the CDDL should have accompanied this
+# source.  A copy of the CDDL is also available via the Internet at
+# http://www.illumos.org/license/CDDL.
+#
+# Copyright 2018 Joyent, Inc.
+#
+
+#
+# smatch/sparse checks we always disable, due to too many false positives (or
+# simply too much legacy).
+#
+
+SMATCH_ARGS += -_smatch=--disable=uninitialized,check_check_deref
+SMATCH_ARGS += -_smatch=-Wno-vla
+SMATCH_ARGS += -_smatch=-Wno-one-bit-signed-bitfield
+
+# disable warnings about e.g. "int a = 0x100000000"
+SMATCH_ARGS += -_smatch=-Wno-big-constants
+# we have lots of legacy "void foo();" in headers
+SMATCH_ARGS += -_smatch=-Wno-non-ansi-function-declaration
+
+CERRWARN += $(SMATCH_ARGS)
+
+DISABLE_SMATCH = -_smatch=off
