@@ -191,10 +191,11 @@ reparsed_door_call_error(int error, int buflen)
 	memset(&rpd_res, 0, sizeof (reparsed_door_res_t));
 	rpd_res.res_status = error;
 	rpd_res.res_len = buflen;
-	door_return((char *)&rpd_res, sizeof (reparsed_door_res_t), NULL, 0);
+	(void) door_return((char *)&rpd_res,
+	    sizeof (reparsed_door_res_t), NULL, 0);
 
 	(void) door_return(NULL, 0, NULL, 0);
-	/* NOTREACHED */
+	abort();
 }
 
 /*
