@@ -328,8 +328,7 @@ stabs_read(tdata_t *td, Elf *elf, const char *file)
 		 * the N_PSYM stabs.
 		 */
 		if (scope && stab->n_type != N_PSYM) {
-			if (iidescp)
-				iidesc_free(iidescp);
+			iidesc_free(iidescp);
 			goto parse_loop_end;
 		}
 

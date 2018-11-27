@@ -22,6 +22,7 @@
 # Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
+# Copyright (c) 2018, Joyent, Inc.
 
 SHELL=/usr/bin/ksh93
 
@@ -103,6 +104,9 @@ CERRWARN	+= -_gcc=-Wno-uninitialized
 CERRWARN	+= -_gcc=-Wno-char-subscripts
 CERRWARN	+= -_gcc=-Wno-empty-body
 CERRWARN	+= -_gcc=-Wno-unused-value
+
+# too much for smatch
+CERRWARN	+= $(DISABLE_SMATCH)
 
 pics/ppcall.o 		:= CERRWARN += -erroff=E_INTEGER_OVERFLOW_DETECTED
 pics/ppcontrol.o 	:= CERRWARN += -erroff=E_INTEGER_OVERFLOW_DETECTED
