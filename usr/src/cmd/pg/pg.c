@@ -226,7 +226,7 @@ main(int argc, char **argv)
 	/* check for non-standard + option */
 	for (i = 1; i < argc; i++) {
 		if (strcmp(argv[i], "--") == 0)
-		break;
+			break;
 
 		if (argv[i][0] == '+') {
 			if (argv[i][1] == '/') {

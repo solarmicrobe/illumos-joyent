@@ -21,14 +21,16 @@
 # Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
-# cmd/fwflash/Makefile.com
-#
+# Copyright (c) 2018, Joyent, Inc.
 #
 # common rules for $SRC/cmd/fwflash
 
 CERRWARN +=		-_gcc=-Wno-parentheses
 CERRWARN +=		-_gcc=-Wno-uninitialized
 CERRWARN +=		-_gcc=-Wno-address
+
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
 
 ROOTUSR=                $(ROOT)/usr
 ROOTUSRINCLD=		$(ROOTUSR)/include

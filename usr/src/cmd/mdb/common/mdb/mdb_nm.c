@@ -785,7 +785,7 @@ cmd_nm(uintptr_t addr, uint_t flags, int argc, const mdb_arg_t *argv)
 		for (symp = syms; nsyms-- != 0; symp++) {
 			nii.nii_fp = symp->nm_fp;
 
-			callback(&nii, &symp->nm_sym, symp->nm_name,
+			(void) callback(&nii, &symp->nm_sym, symp->nm_name,
 			    &symp->nm_si, symp->nm_object);
 		}
 

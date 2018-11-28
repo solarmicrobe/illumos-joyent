@@ -19,11 +19,14 @@
  *
  * CDDL HEADER END
  */
-#pragma ident	"%Z%%M%	%I%	%E% SMI" 
 
 /*
  * Copyright (c) 1983-1998 by Sun Microsystems, Inc.
  * All rights reserved.
+ */
+
+/*
+ * Copyright (c) 2018, Joyent, Inc.
  */
 
 /*

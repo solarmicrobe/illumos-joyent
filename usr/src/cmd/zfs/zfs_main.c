@@ -1112,7 +1112,7 @@ destroy_callback(zfs_handle_t *zhp, void *data)
 	while ((err = zfs_destroy_snaps_nvl(g_zfs,
 	    cbp->cb_batchedsnaps, B_FALSE)) != 0) {
 		if (cbp->cb_wait && libzfs_errno(g_zfs) == EZFS_BUSY) {
-			nanosleep(&ts, NULL);
+			(void) nanosleep(&ts, NULL);
 			continue;
 		}
 		(void) fprintf(stderr, "%s: %s\n",

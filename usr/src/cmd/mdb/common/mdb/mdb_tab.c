@@ -398,8 +398,7 @@ mdb_tab_insert(mdb_tab_cookie_t *mcp, const char *name)
 	 * If we have a match set, then we want to verify that we actually match
 	 * it.
 	 */
-	if (mcp->mtc_base != NULL &&
-	    strncmp(name, mcp->mtc_base, strlen(mcp->mtc_base)) != 0)
+	if (strncmp(name, mcp->mtc_base, strlen(mcp->mtc_base)) != 0)
 		return;
 
 	v = mdb_nv_lookup(&mcp->mtc_nv, name);
@@ -438,13 +437,7 @@ mdb_tab_print(mdb_tab_cookie_t *mcp)
 const char *
 mdb_tab_match(mdb_tab_cookie_t *mcp)
 {
-	size_t blen;
-
-	if (mcp->mtc_base == NULL)
-		blen = 0;
-	else
-		blen = strlen(mcp->mtc_base);
-	return (mcp->mtc_match + blen);
+	return (mcp->mtc_match + strlen(mcp->mtc_base));
 }
 
 void

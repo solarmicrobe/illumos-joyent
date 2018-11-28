@@ -22,6 +22,7 @@
 # Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
+# Copyright (c) 2018, Joyent, Inc.
 
 PROG = isnsadm
 SRCS = cmdparse.c isnsadm.c isnsadm_msg.c
@@ -39,6 +40,12 @@ LINTFLAGS += -xerroff=E_BAD_FORMAT_STR2
 
 CERRWARN += -_gcc=-Wno-parentheses
 CERRWARN += -_gcc=-Wno-uninitialized
+
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
+
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
 
 .KEEP_STATE:
 

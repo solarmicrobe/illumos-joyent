@@ -24,6 +24,10 @@
  */
 
 /*
+ * Copyright (c) 2018, Joyent, Inc.
+ */
+
+/*
  * Routines used to read stabs data from a file, and to build a tdata structure
  * based on the interesting parts of that data.
  */

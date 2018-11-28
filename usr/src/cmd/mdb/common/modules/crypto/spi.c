@@ -191,7 +191,7 @@ crypto_mech_info(uintptr_t addr, uint_t flags, int argc,
 	crypto_mech_info_t minfo;
 	const char *unit = "bits";
 
-	if (! flags & DCMD_ADDRSPEC)
+	if (!(flags & DCMD_ADDRSPEC))
 		return (DCMD_USAGE);
 
 	if (mdb_vread(&minfo, sizeof (crypto_mech_info_t), addr)

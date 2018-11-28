@@ -24,6 +24,7 @@
 # Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
+# Copyright (c) 2018, Joyent, Inc.
 
 PROG=		error
 
@@ -42,6 +43,8 @@ CSTD=	$(CSTD_GNU99)
 
 CERRWARN +=	-_gcc=-Wno-uninitialized
 CERRWARN +=	-_gcc=-Wno-parentheses
+
+CERRWARN += -_smatch=--disable=no_if_block,indenting
 
 CLEANFILES +=	$(LINTOUT)
 

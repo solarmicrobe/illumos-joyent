@@ -1101,7 +1101,7 @@ do_subproc(zlog_t *zlogp, char *cmdbuf, char **retstr, boolean_t debug)
 		 * zoneadmd' to kill this child process before exec().  On
 		 * exec(), SIGHUP and SIGUSR1 will become SIG_DFL.
 		 */
-		sigset(SIGINT, SIG_DFL);
+		(void) sigset(SIGINT, SIG_DFL);
 
 		/*
 		 * Set up a pipe for the child to log to.
@@ -2897,11 +2897,10 @@ main(int argc, char *argv[])
 
 child_out:
 	assert(pid == 0);
-	if (shstate != NULL) {
-		shstate->status = -1;
-		(void) sema_post(&shstate->sem);
-		(void) munmap((char *)shstate, shstatelen);
-	}
+
+	shstate->status = -1;
+	(void) sema_post(&shstate->sem);
+	(void) munmap((char *)shstate, shstatelen);
 
 	/*
 	 * This might trigger an unref notification, but if so,

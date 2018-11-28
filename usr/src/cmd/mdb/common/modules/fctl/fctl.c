@@ -1109,7 +1109,7 @@ fc_trace_dump(uintptr_t addr, uint_t flags, int argc, const mdb_arg_t *argv)
 		return (DCMD_USAGE);
 	}
 
-	if (logq.il_flags & FC_TRACE_LOGQ_V2 != 0) {
+	if ((logq.il_flags & FC_TRACE_LOGQ_V2) != 0) {
 		rval = fc_dump_logmsg((fc_trace_dmsg_t *)logq.il_msgh, pktstart,
 		    pktend, &printed);
 	} else {

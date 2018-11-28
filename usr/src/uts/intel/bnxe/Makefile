@@ -10,7 +10,7 @@
 #
 
 #
-# Copyright (c) 2014, Joyent, Inc.  All rights reserved.
+# Copyright (c) 2018, Joyent, Inc.
 #
 
 #

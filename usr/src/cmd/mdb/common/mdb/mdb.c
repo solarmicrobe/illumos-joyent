@@ -1155,7 +1155,7 @@ mdb_call_tab(mdb_idcmd_t *idcp, mdb_tab_cookie_t *mcp, uint_t flags,
 	if (idcp->idc_tabp == NULL)
 		return;
 
-	idcp->idc_tabp(mcp, flags, argc, argv);
+	(void) idcp->idc_tabp(mcp, flags, argc, argv);
 }
 
 /*

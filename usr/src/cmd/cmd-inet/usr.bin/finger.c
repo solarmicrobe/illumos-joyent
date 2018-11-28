@@ -38,6 +38,10 @@
  */
 
 /*
+ * Copyright (c) 2018, Joyent, Inc.
+ */
+
+/*
  * This is a finger program.  It prints out useful information about users
  * by digging it up from various system files.
  *

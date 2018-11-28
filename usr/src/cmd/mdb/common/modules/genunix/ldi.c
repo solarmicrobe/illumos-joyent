@@ -379,7 +379,8 @@ ldi_handle(uintptr_t addr, uint_t flags, int argc, const mdb_arg_t *argv)
 		    argc, argv) == -1) {
 			mdb_warn("can't walk ldi handles");
 			return (DCMD_ERR);
-		} return (DCMD_OK);
+		}
+		return (DCMD_OK);
 	}
 
 	/* display the header line */

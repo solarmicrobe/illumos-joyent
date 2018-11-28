@@ -23,6 +23,10 @@
  * Use is subject to license terms.
  */
 
+/*
+ * Copyright (c) 2018, Joyent, Inc.
+ */
+
 #ifndef _CTFTOOLS_H
 #define	_CTFTOOLS_H
 

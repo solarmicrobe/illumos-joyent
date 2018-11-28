@@ -20,6 +20,10 @@
  * WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  */
 
+/*
+ * Copyright (c) 2018, Joyent, Inc.
+ */
+
 /* derived from @(#)rcmd.c	5.17 (Berkeley) 6/27/88 */
 
 #include <unistd.h>

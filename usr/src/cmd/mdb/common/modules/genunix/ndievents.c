@@ -80,7 +80,7 @@ dip_to_pathname(struct dev_info *device, char *path, int buflen) {
 	}
 
 	if (device->devi_node_state < DS_INITIALIZED) {
-		strncpy(addr_str, '\0', sizeof ('\0'));
+		addr_str[0] = '\0';
 	} else {
 		addr = device->devi_addr;
 		if (mdb_readstr(addr_str, sizeof (addr_str),

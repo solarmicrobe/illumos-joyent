@@ -21,6 +21,7 @@
 
 #
 # Copyright (c) 1997, 2010, Oracle and/or its affiliates. All rights reserved.
+# Copyright (c) 2018, Joyent, Inc.
 #
 
 PROG=		elfdump
@@ -59,6 +60,9 @@ LINTFLAGS +=	-x
 LINTFLAGS64 +=	-x
 
 CERRWARN +=	-_gcc=-Wno-uninitialized
+
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
 
 BLTDEFS =	msg.h
 BLTDATA =	msg.c

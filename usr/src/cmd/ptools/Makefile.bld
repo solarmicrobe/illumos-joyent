@@ -59,17 +59,23 @@ LDLIBS_pwdx		= -lproc
 LDLIBS += $(LDLIBS_$(PROG))
 
 CERRWARN_plgrp	+= -_gcc=-Wno-parentheses
+CERRWARN_plgrp	+= $(DISABLE_SMATCH)
+
+CERRWARN_pmadvise += $(DISABLE_SMATCH)
 
 CERRWARN_ppriv	+= -_gcc=-Wno-parentheses
 CERRWARN_ppriv	+= -_gcc=-Wno-uninitialized
 
 CERRWARN_ptree	+= -_gcc=-Wno-parentheses
+CERRWARN_ptree	+= $(DISABLE_SMATCH)
 
 CERRWARN_pstack	+= -_gcc=-Wno-uninitialized
 CERRWARN_pstack	+= -_gcc=-Wno-clobbered
 
 CERRWARN_pargs	+= -_gcc=-Wno-clobbered
 CERRWARN_pargs	+= -_gcc=-Wno-type-limits
+
+CERRWARN_pwait	+= $(DISABLE_SMATCH)
 
 CERRWARN += $(CERRWARN_$(PROG))
 

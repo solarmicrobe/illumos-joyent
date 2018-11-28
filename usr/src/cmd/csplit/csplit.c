@@ -27,6 +27,10 @@
 /*	  All Rights Reserved  	*/
 
 /*
+ * Copyright (c) 2018, Joyent, Inc.
+ */
+
+/*
  * csplit - Context or line file splitter
  * Compile: cc -O -s -o csplit csplit.c
  */
