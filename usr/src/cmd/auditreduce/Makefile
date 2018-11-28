@@ -24,7 +24,7 @@
 # Copyright 2010 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
-#
+# Copyright (c) 2018, Joyent, Inc.
 
 TABLEDIR = ../praudit
 
@@ -43,6 +43,8 @@ LDLIBS += -lnsl -lbsm -lscf -ltsol
 
 CERRWARN += -_gcc=-Wno-uninitialized
 CERRWARN += -_gcc=-Wno-parentheses
+
+CERRWARN += -_smatch=--disable=indenting,no_if_block
 
 .KEEP_STATE:
 

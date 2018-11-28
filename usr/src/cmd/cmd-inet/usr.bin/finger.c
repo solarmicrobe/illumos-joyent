@@ -1359,7 +1359,7 @@ AlreadyPrinted(uid_t uid)
 
 	while (i++ < PPIndex) {
 		if (PlanPrinted[i] == uid)
-		return (1);
+			return (1);
 	}
 	if (i < PPMAX) {
 		PlanPrinted[i] = uid;

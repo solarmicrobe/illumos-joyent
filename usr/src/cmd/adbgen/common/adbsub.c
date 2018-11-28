@@ -167,7 +167,7 @@ do_fmt(char *acp)
 			exit(1);
 		}
 		for (i = 0; i < rcount; i++) {
-			putchar(*cp);
+			(void) putchar(*cp);
 		}
 		cp++;
 		sum += width * rcount;

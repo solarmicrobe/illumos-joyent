@@ -90,6 +90,9 @@ rlogin lint-rlogin :=	LDLIBS += -lnsl -lsocket
 rsh lint-rsh :=		LDLIBS += -lsocket
 whois lint-whois :=	LDLIBS += -lsocket
 
+rcp :=		CERRWARN += -_smatch=--disable=missing_break
+ruptime :=	CERRWARN += -_smatch=--disable=leaks
+
 include  $(SRC)/lib/gss_mechs/mech_krb5/Makefile.mech_krb5
 $(KCMDPROGS)	:=	LDLIBS += -lnsl -lmech_krb5
 $(KCMDPROGS)	:=	LDFLAGS += $(ZIGNORE) $(KRUNPATH) \

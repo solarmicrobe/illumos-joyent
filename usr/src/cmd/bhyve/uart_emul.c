@@ -382,7 +382,7 @@ uart_reset(struct uart_softc *sc)
 
 	divisor = DEFAULT_RCLK / DEFAULT_BAUD / 16;
 	sc->dll = divisor;
-	sc->dlh = divisor >> 16;
+	sc->dlh = 0;
 	sc->msr = modem_status(sc->mcr);
 
 	rxfifo_reset(sc, 1);	/* no fifo until enabled by software */

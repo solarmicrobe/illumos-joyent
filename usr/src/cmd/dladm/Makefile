@@ -46,6 +46,8 @@ CERRWARN +=	-_gcc=-Wno-switch
 CERRWARN +=	-_gcc=-Wno-unused-label
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
+CERRWARN += -_smatch=--disable=snprintf_overflow
+
 # For headers from librstp.
 LINTFLAGS +=	-erroff=E_TRAILING_COMMA_IN_ENUM
 lint :=		ZLAZYLOAD=

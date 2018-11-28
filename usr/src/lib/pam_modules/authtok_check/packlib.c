@@ -223,8 +223,8 @@ PutPW(PWDICT *pwp, char *string)
 			ostr = nstr;
 		}
 
-	(void) memset(pwp->data, '\0', sizeof (pwp->data));
-	pwp->count = 0;
+		(void) memset(pwp->data, '\0', sizeof (pwp->data));
+		pwp->count = 0;
 	}
 	return (0);
 }

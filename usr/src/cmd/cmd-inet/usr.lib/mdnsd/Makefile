@@ -22,6 +22,7 @@
 # Use is subject to license terms.
 # Copyright 2016 Toomas Soome <tsoome@me.com>
 #
+# Copyright (c) 2018, Joyent, Inc.
 
 PROG=		mdnsd
 MANIFEST=	multicast.xml
@@ -52,6 +53,9 @@ include	../../../Makefile.cmd
 CERRWARN +=	-_gcc=-Wno-unused-variable
 CERRWARN +=	-_gcc=-Wno-implicit-function-declaration
 CERRWARN +=	-_gcc=-Wno-uninitialized
+
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
 
 ROOTMANIFESTDIR=	$(ROOTSVCNETWORKDNS)
 $(ROOTMANIFEST)		:= FILEMODE= 444

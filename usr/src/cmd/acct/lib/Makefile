@@ -35,6 +35,9 @@ CERRWARN += -_gcc=-Wno-implicit-function-declaration
 CERRWARN += -_gcc=-Wno-parentheses
 CERRWARN += -_gcc=-Wno-extra
 
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
+
 .KEEP_STATE:
 
 .PARALLEL: $(OBJS)

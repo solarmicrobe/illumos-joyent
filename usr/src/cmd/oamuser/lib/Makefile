@@ -22,6 +22,7 @@
 # Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
+# Copyright (c) 2018, Joyent, Inc.
 
 LIBRARY= 	lib.a
 
@@ -66,6 +67,9 @@ CPPFLAGS=	-I. -I$(GENERAL) $(CPPFLAGS.master)
 CERRWARN +=	-_gcc=-Wno-parentheses
 CERRWARN +=	-_gcc=-Wno-type-limits
 CERRWARN +=	-_gcc=-Wno-unused-variable
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
+
 ARFLAGS=	cr
 AROBJS=		`$(LORDER) $(OBJS) | $(TSORT)`
 LINTFLAGS=	-u

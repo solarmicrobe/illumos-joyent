@@ -12,7 +12,6 @@
 #
 # Copyright 2014 Garrett D'Amore <garrett@damore.org>
 # Copyright 2015 Nexenta Systems, Inc.  All rights reserved.
-#
 
 include		$(SRC)/cmd/Makefile.cmd
 include		$(SRC)/cmd/mandoc/Makefile.common

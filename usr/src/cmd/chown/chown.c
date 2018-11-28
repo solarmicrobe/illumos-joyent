@@ -31,7 +31,9 @@
  * under license from the Regents of the University of California.
  */
 
-#pragma ident	"%Z%%M%	%I%	%E% SMI"
+/*
+ * Copyright (c) 2018, Joyent, Inc.
+ */
 
 /*
  * chown [-fhR] uid[:gid] file ...
@@ -217,7 +219,7 @@ main(int argc, char *argv[])
 					if (errno == ERANGE) {
 						(void) fprintf(stderr, gettext(
 						"chown: group id too large\n"));
-							exit(2);
+						exit(2);
 					} else {
 						(void) fprintf(stderr, gettext(
 						"chown: invalid group id\n"));

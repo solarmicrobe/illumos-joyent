@@ -93,6 +93,9 @@ $(SPARC_BLD)include ../../Makefile.cmd.64
 FILEMODE= 555
 CERRWARN += -_gcc=-Wno-parentheses
 
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
+
 .KEEP_STATE:
 
 all: $(PROG)

@@ -21,6 +21,7 @@
 #
 # Copyright (c) 1992, 2010, Oracle and/or its affiliates. All rights reserved.
 #
+# Copyright (c) 2018, Joyent, Inc.
 
 PROG = auditd
 
@@ -38,6 +39,8 @@ CPPFLAGS += -D_REENTRANT
 CPPFLAGS += -I$(LIBBSM) -I$(AUDITD)
 
 CERRWARN += -_gcc=-Wno-parentheses
+
+CERRWARN += -_smatch=--disable=macros
 
 LDLIBS += -lbsm -lsecdb
 

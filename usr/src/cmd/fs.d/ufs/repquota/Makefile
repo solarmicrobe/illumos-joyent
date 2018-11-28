@@ -23,6 +23,7 @@
 # Copyright (c) 1989,1996 by Sun Microsystems, Inc.
 # All rights reserved.
 #
+# Copyright (c) 2018, Joyent, Inc.
 
 FSTYPE=		ufs
 LIBPROG=	repquota
@@ -37,6 +38,9 @@ CPPFLAGS +=	-D_LARGEFILE64_SOURCE
 
 CERRWARN +=	-_gcc=-Wno-type-limits
 CERRWARN +=	-_gcc=-Wno-uninitialized
+
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
 
 lint:		lint_PROG
 

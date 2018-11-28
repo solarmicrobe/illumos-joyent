@@ -26,9 +26,9 @@
 /*
  * Copyright 2004 Sun Microsystems, Inc.  All rights reserved.
  * Use is subject to license terms.
+ *
+ * Copyright (c) 2018, Joyent, Inc.
  */
-
-#pragma ident	"%Z%%M%	%I%	%E% SMI"	/* SVr4.0 1.13	*/
 
 /*
     NAME
@@ -739,16 +739,16 @@ check_nth_terminal(char *nterm, int n)
 			if (common && (num[i].val == numval))
 				(void) printf("\t%s= %d.\n", num[i].infoname,
 				    numval);
-			} else if (neither && (num[i].val == -1))
-				(void) printf("\t!%s.\n", num[i].infoname);
-			if (diff && (num[i].val != numval))
-				(void) printf("\t%s: %d:%d.\n",
-				    num[i].infoname, num[i].val, numval);
-			if (verbose)
-				(void) fprintf(trace, "%s: %d:%d, "
-				    "changed = %d, seen = %d.\n",
-				    num[i].infoname, num[i].val, numval,
-				    num[i].changed, num[i].seenagain);
+		} else if (neither && (num[i].val == -1))
+			(void) printf("\t!%s.\n", num[i].infoname);
+		if (diff && (num[i].val != numval))
+			(void) printf("\t%s: %d:%d.\n",
+			    num[i].infoname, num[i].val, numval);
+		if (verbose)
+			(void) fprintf(trace, "%s: %d:%d, "
+			    "changed = %d, seen = %d.\n",
+			    num[i].infoname, num[i].val, numval,
+			    num[i].changed, num[i].seenagain);
 	}
 
 	if (printing != pr_none) {

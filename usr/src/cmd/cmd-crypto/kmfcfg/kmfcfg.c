@@ -21,6 +21,10 @@
  * Copyright (c) 2006, 2010, Oracle and/or its affiliates. All rights reserved.
  */
 
+/*
+ * Copyright (c) 2018, Joyent, Inc.
+ */
+
 #include <stdio.h>
 #include <strings.h>
 #include <ctype.h>
@@ -189,7 +193,8 @@ main(int argc, char *argv[])
 	(void) textdomain(TEXT_DOMAIN);
 
 	prog = basename(argv[0]);
-	argv++; argc--;
+	argv++;
+	argc--;
 
 	if (argc == 0) {
 		usage();

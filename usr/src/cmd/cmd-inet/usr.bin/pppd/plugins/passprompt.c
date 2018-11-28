@@ -70,7 +70,7 @@ static int promptpass(char *user, char *passwd)
 	argv[0] = promptprog;
 	argv[1] = user == NULL ? "" : user;
 	argv[2] = remote_name;
-	slprintf(fdstr, sizeof (fdstr), "%d", p[1]);
+	(void) slprintf(fdstr, sizeof (fdstr), "%d", p[1]);
 	argv[3] = fdstr;
 	argv[4] = NULL;
 	(void) execv(*argv, argv);

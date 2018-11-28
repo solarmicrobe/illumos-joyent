@@ -11,6 +11,7 @@
 # Copyright (c) 2018, Joyent, Inc.
 # Copyright 2016 RackTop Systems.
 #
+# Copyright (c) 2018, Joyent, Inc.
 
 PROG=		acpidump
 
@@ -26,6 +27,9 @@ SRCS = $(OBJS:.o=.c)
 VPATH = ../common:$(SRC)/common/acpica/utilities:$(SRC)/common/acpica/tables
 
 CERRWARN += -_gcc=-Wno-unused-function
+
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
 
 CPPFLAGS += -I$(SRC)/uts/intel/sys/acpi -DACPI_DUMP_APP
 

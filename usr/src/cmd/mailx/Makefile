@@ -68,6 +68,9 @@ CERRWARN +=	-_gcc=-Wno-parentheses
 CERRWARN +=	-_gcc=-Wno-uninitialized
 CERRWARN +=	-_gcc=-Wno-unused-variable
 CERRWARN +=	-_gcc=-Wno-clobbered
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
+
 LINTFLAGS=	-hb
 LDLIBS +=	-lmail -lcustr
 LDFLAGS +=	$(MAPFILE.NGB:%=-M%)

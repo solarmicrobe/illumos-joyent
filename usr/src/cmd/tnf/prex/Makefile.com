@@ -24,8 +24,7 @@
 # Copyright 1989,2003 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
-# cmd/tnf/prex/Makefile.com
-#
+# Copyright (c) 2018, Joyent, Inc.
 
 PROG=		prex
 
@@ -71,6 +70,9 @@ CERRWARN +=	-_gcc=-Wno-unused-label
 CERRWARN +=	-_gcc=-Wno-unused-variable
 CERRWARN +=	-_gcc=-Wno-parentheses
 CERRWARN +=	-_gcc=-Wno-uninitialized
+
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
 
 .KEEP_STATE:
 

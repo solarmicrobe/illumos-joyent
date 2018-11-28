@@ -23,6 +23,7 @@
  * Copyright 2010 Sun Microsystems, Inc.  All rights reserved.
  * Use is subject to license terms.
  * Copyright 2012 Milan Jurik. All rights reserved.
+ * Copyright (c) 2018, Joyent, Inc.
  */
 
 #include <sys/types.h>
@@ -1770,7 +1771,7 @@ sa_list(sa_handle_t handle, int flags, int argc, char *argv[])
 			}
 			(void) printf(gettext("usage: %s\n"),
 			    sa_get_usage(USAGE_LIST));
-				return (ret);
+			return (ret);
 		}
 	}
 
@@ -5654,12 +5655,13 @@ sa_legacy_share(sa_handle_t handle, int flags, int argc, char *argv[])
 		if (ret == SA_OK && resource != NULL) {
 			rsrc = sa_find_resource(handle, resource);
 			if (rsrc != NULL) {
-				if (share != sa_get_resource_parent(rsrc))
+				if (share != sa_get_resource_parent(rsrc)) {
 					ret = SA_DUPLICATE_NAME;
 				} else {
 					rsrc = sa_add_resource(share, resource,
 					    persist, &ret);
 				}
+
 				if (features & SA_FEATURE_RESOURCE)
 					share = rsrc;
 			}
@@ -5668,8 +5670,7 @@ sa_legacy_share(sa_handle_t handle, int flags, int argc, char *argv[])
 			if (ret == SA_OK && options != NULL &&
 			    strlen(options) > 0) {
 				ret = sa_parse_legacy_options(share,
-				    options,
-				    protocol);
+				    options, protocol);
 			}
 			if (!zfs) {
 				/*
@@ -5696,6 +5697,7 @@ sa_legacy_share(sa_handle_t handle, int flags, int argc, char *argv[])
 				if (ret == SA_OK)
 					ret = sa_update_config(handle);
 			}
+		}
 	}
 err:
 	if (ret != SA_OK) {

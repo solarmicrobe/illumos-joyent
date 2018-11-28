@@ -23,6 +23,10 @@
  * Use is subject to license terms.
  */
 
+/*
+ * Copyright (c) 2018, Joyent, Inc.
+ */
+
 #include <stdio.h>
 #include <sys/types.h>
 #include <string.h>
@@ -97,7 +101,7 @@ main(int argc, char *argv[])
 			perror("read");
 		exit(-1);
 	}
-	close(fd);
+	(void) close(fd);
 
 	device = strdup(argv[optind]);
 	if (!device) {

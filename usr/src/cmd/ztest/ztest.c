@@ -24,7 +24,7 @@
  * Copyright 2011 Nexenta Systems, Inc.  All rights reserved.
  * Copyright (c) 2013 Steven Hartland. All rights reserved.
  * Copyright (c) 2014 Integros [integros.com]
- * Copyright 2017 Joyent, Inc.
+ * Copyright (c) 2018, Joyent, Inc.
  * Copyright 2017 RackTop Systems.
  */
 
