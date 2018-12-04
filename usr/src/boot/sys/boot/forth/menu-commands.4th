@@ -23,6 +23,7 @@
 \ SUCH DAMAGE.
 \
 \ Copyright 2015 Toomas Soome <tsoome@me.com>
+\ Copyright (c) 2018 Joyent, Inc.
 
 marker task-menu-commands.4th
 
@@ -44,6 +45,21 @@ variable debug_state
 0 root_state !
 
 also menu-namespace also menu-command-helpers
+
+\ Place string into an allocated buffer
+\
+\ e.g
+\ create mystring 32 chars allot
+\ s" Burning down " mystring place
+\
+: place over over >r >r char+ swap chars move r> r> c! ;
+
+\ Append string
+\
+\ e.g.
+\ s" the house!" mystring append
+\
+: append over over >r >r count chars + swap chars move r> r> dup >r c@ + r> c! ;
 
 \
 \ Rollback to previous platform image.
