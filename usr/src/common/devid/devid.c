@@ -387,7 +387,7 @@ devid_str_decode_id(char *devidstr, ddi_devid_t *devidp,
 		if (pre_alloc == FALSE) {
 			if ((id = (impl_devid_t *)DEVID_MALLOC(
 			    devid_len)) == NULL)
-			return (DEVID_FAILURE);
+				return (DEVID_FAILURE);
 		}
 
 		/* decode header portion of the string into the binary devid */

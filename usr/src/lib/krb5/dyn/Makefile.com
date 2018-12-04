@@ -22,6 +22,9 @@
 # Copyright 2006 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
+
 
 LIBRARY= libdyn.a
 VERS= .1
@@ -62,6 +65,8 @@ CFLAGS +=	$(CCVERBOSE) -I..
 LDLIBS +=	-lc
 
 CERRWARN +=	-_gcc=-Wno-unused-variable
+
+CERRWARN += -_smatch=--disable=no_if_block
 
 .KEEP_STATE:
 

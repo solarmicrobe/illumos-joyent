@@ -33,3 +33,6 @@ chip_serial.c chip_smbios.c
 
 include ../../Makefile.plugin
 LDLIBS += -lipmi -lfmd_agent -lumem -lsmbios -lkstat
+
+# not linted
+CERRWARN += $(DISABLE_SMATCH)

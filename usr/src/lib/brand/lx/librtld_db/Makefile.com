@@ -23,8 +23,7 @@
 # Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
-# ident	"%Z%%M%	%I%	%E% SMI"
-#
+# Copyright (c) 2018, Joyent, Inc.
 
 LIBRARY =	lx_librtld_db.a
 VERS	=	.1
@@ -58,6 +57,9 @@ CPPFLAGS +=	-D_REENTRANT -I../ -I$(UTSBASE)/common/brand/lx \
 			-I$(SRC)/cmd/sgs/librtld_db/common \
 			-I$(SRC)/cmd/sgs/include \
 			-I$(SRC)/cmd/sgs/include/$(MACH)
+
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
 
 ROOTLIBDIR =	$(ROOT)/usr/lib/brand/lx
 ROOTLIBDIR64 =	$(ROOT)/usr/lib/brand/lx/$(MACH64)

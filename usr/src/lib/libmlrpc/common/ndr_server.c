@@ -640,7 +640,7 @@ ndr_reply_fault(ndr_xa_t *mxa, unsigned long drc)
 	ndr_stream_t *nds = &mxa->send_nds;
 	unsigned long fault_status;
 
-	NDS_RESET(nds);
+	(void) NDS_RESET(nds);
 
 	hdr->rpc_vers = 5;
 	hdr->rpc_vers_minor = 0;

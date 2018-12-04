@@ -162,8 +162,7 @@ mv_xattrs(char *cmd, char *infile, char *outfile, int sattr, int silent)
 			 * Gets non default extended system attributes from
 			 * source to copy to target.
 			 */
-			if (dp->d_name != NULL)
-				res = sysattr_list(cmd, sattrfd, dp->d_name);
+			res = sysattr_list(cmd, sattrfd, dp->d_name);
 
 			if (res != NULL &&
 			    get_attrdirs(indfd, outdfd, dp->d_name, &asfd,

@@ -12,6 +12,7 @@
 #
 # Copyright 2016 Toomas Soome <tsoome@me.com>
 #
+# Copyright (c) 2018, Joyent, Inc.
 
 LIBRARY=libficl-sys.a
 MAJOR = 4
@@ -35,6 +36,9 @@ CPPFLAGS +=	-I.. -I$(FICLDIR) -D_LARGEFILE64_SOURCE=1
 # function argument. So we switch this warning off
 # for time being, till gcc 4.4.4 will be replaced.
 pics/vm.o := CERRWARN += -_gcc=-Wno-clobbered
+
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
 
 LDLIBS +=	-luuid -lc -lm -lumem
 

@@ -115,7 +115,7 @@ vpanic(const char *fmt, va_list adx)
 
 	/* Call libc`assfail() so that mdb ::status works */
 	(void) vsnprintf(panicbuf, sizeof (panicbuf), fmt, adx);
-	assfail(panicbuf, "(panic)", 0);
+	(void) assfail(panicbuf, "(panic)", 0);
 
 	abort();	/* avoid "noreturn" warnings */
 }

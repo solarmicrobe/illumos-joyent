@@ -83,6 +83,9 @@ CERRWARN += -_gcc=-Wno-uninitialized
 CERRWARN += -_gcc=-Wno-switch
 CERRWARN += -_gcc=-Wno-parentheses
 
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
+
 LINTFLAGS = -msux
 LINTFLAGS64 = -msux -m64
 

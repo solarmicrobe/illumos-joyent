@@ -21,6 +21,8 @@ include ../Makefile.tools
 LDLIBS	+= -lnvpair
 CPPFLAGS += -I$(SRC)/lib/json_nvlist/ -I$(SRC)/lib/libcustr/common
 
+CERRWARN += -_smatch=--disable=signed
+
 all: $(PROG)
 
 install: all .WAIT $(ROOTONBLDMACHPROG)

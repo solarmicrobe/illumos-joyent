@@ -10,7 +10,7 @@
  */
 
 /*
- * Copyright 2015 Joyent, Inc.
+ * Copyright (c) 2018, Joyent, Inc.
  */
 
 /*
@@ -415,7 +415,7 @@ mergeq_push(mergeq_t *mqp, size_t slot, void *item)
 		mqp->mq_ncommit %= mqp->mq_cap;
 		mqp->mq_gncommit++;
 	}
-	cond_broadcast(&mqp->mq_cond);
+	(void) cond_broadcast(&mqp->mq_cond);
 }
 
 static void *
@@ -514,7 +514,7 @@ mergeq_thr_merge(void *arg)
 			if (mqp->mq_iserror == B_FALSE) {
 				mqp->mq_iserror = B_TRUE;
 				mqp->mq_error = ret;
-				cond_broadcast(&mqp->mq_cond);
+				(void) cond_broadcast(&mqp->mq_cond);
 			}
 			mqp->mq_nactthrs--;
 			VERIFY0(mutex_unlock(&mqp->mq_lock));

@@ -98,7 +98,7 @@ CERRWARN	+= -_cc=-erroff=E_INTEGER_OVERFLOW_DETECTED
 CERRWARN	+= -_cc=-erroff=E_CONST_PROMOTED_UNSIGNED_LL
 CERRWARN	+= -_cc=-erroff=E_ENUM_VAL_OVERFLOWS_INT_MAX
 
-#CERRWARN	+= -_smatch=-Wno-empty-character-constant
+CERRWARN	+= -_smatch=-Wno-empty-character-constant
 
 LINTTAGS	+= -erroff=E_FUNC_RET_ALWAYS_IGNOR2
 LINTTAGS	+= -erroff=E_FUNC_RET_MAYBE_IGNORED2

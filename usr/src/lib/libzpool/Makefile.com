@@ -89,6 +89,9 @@ CERRWARN +=	-_gcc=-Wno-empty-body
 CERRWARN +=	-_gcc=-Wno-unused-function
 CERRWARN +=	-_gcc=-Wno-unused-label
 
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
+
 .KEEP_STATE:
 
 all: $(LIBS)

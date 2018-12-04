@@ -42,6 +42,9 @@ CERRWARN +=	-_gcc=-Wno-type-limits
 CERRWARN +=	-_gcc=-Wno-parentheses
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
+
 AES_PSM_SRC =	$(AES_DIR)/$(MACH64)/aes_amd64.s \
 		$(AES_DIR)/$(MACH64)/aes_intel.s \
 		$(AES_DIR)/$(MACH64)/aeskey.c

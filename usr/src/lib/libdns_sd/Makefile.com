@@ -22,6 +22,7 @@
 # Use is subject to license terms.
 # Copyright 2016 Toomas Soome <tsoome@me.com>
 #
+# Copyright (c) 2018, Joyent, Inc.
 
 LIBRARY =	libdns_sd.a
 VERS =		.1
@@ -42,7 +43,10 @@ CPPFLAGS +=	-DMDNS_VERSIONSTR_NODTS
 
 pics/dnssd_clientstub.o := CERRWARN +=	-_gcc=-Wno-unused-but-set-variable
 
-.PARALLEL =     $(OBJECTS)
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
+
+PARALLEL =     $(OBJECTS)
 .KEEP_STATE:
 
 lint: lintcheck

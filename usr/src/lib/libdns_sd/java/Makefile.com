@@ -22,6 +22,7 @@
 # Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
+# Copyright (c) 2018, Joyent, Inc.
 
 LIBRARY=	libjdns_sd.a
 VERS=		.1
@@ -40,11 +41,14 @@ CPPFLAGS +=	-I../com/apple/dnssd
 CPPFLAGS +=	-D_REENTRANT
 CPPFLAGS +=	-DMDNS_VERSIONSTR_NODTS
 
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
+
 LDLIBS +=	-lc -lsocket -ldns_sd
 
 CLEANFILES=	$(LINTOUT) $(LINTLIB)
 
-LINTLIB =	
+LINTLIB =
 
 .KEEP_STATE:
 

@@ -18,9 +18,7 @@
 #
 # CDDL HEADER END
 #
-# Copyright 2011 Joyent, Inc.  All rights reserved.
-# Use is subject to license terms.
-#
+# Copyright (c) 2018, Joyent, Inc.
 
 LIBRARY=	libzdoor.a
 VERS=		.1
@@ -38,6 +36,8 @@ SRCS =	$(OBJECTS:%.o=$(SRCDIR)/%.c)
 CPPFLAGS +=	-I$(SRCDIR) -D_REENTRANT -D_FILE_OFFSET_BITS=64
 LIBS =		$(DYNLIB) $(LINTLIB)
 LDLIBS +=	-lc -lzonecfg -lcontract
+
+CERRWARN += -_smatch=--disable=all_func_returns
 
 $(LINTLIB) :=	SRCS=	$(SRCDIR)/$(LINTSRC)
 

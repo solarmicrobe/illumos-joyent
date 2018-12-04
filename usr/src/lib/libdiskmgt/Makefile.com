@@ -66,6 +66,9 @@ CERRWARN +=	-_gcc=-Wno-parentheses
 CERRWARN +=	-_gcc=-Wno-uninitialized
 CPPFLAGS +=	-D_REENTRANT -I$(SRC)/lib/libdiskmgt/common
 
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
+
 .KEEP_STATE:
 
 all: $(LIBS)

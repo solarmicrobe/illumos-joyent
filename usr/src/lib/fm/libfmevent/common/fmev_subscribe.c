@@ -24,6 +24,10 @@
  */
 
 /*
+ * Copyright (c) 2018, Joyent, Inc.
+ */
+
+/*
  * FMA event subscription interfaces - subscribe to FMA protocol
  * from outside the fault manager.
  */
@@ -217,7 +221,7 @@ fmev_proxy_cb(sysevent_t *sep, void *arg)
 	char *class;
 	fmev_t ev;
 
-	if (sip == NULL || sip->si_cb == NULL) {
+	if (sip->si_cb == NULL) {
 		fmev_proxy_cb_inval++;
 		return (0);
 	}

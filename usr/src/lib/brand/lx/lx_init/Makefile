@@ -47,6 +47,9 @@ CFLAGS +=	$(CCVERBOSE)
 CPPFLAGS +=	-D_REENTRANT -I$(UTSBASE)/common/brand/lx
 LDLIBS +=	-lzonecfg -lipadm -lsocket -linetutil -lnsl -lcustr -ldhcpagent
 
+# not linted
+CERRWARN += $(DISABLE_SMATCH)
+
 .KEEP_STATE:
 
 install: all $(ROOTPROG)

@@ -23,6 +23,10 @@
  * Use is subject to license terms.
  */
 
+/*
+ * Copyright (c) 2018, Joyent, Inc.
+ */
+
 #include <syslog.h>
 #include <dlfcn.h>
 #include <sys/types.h>
@@ -794,6 +798,9 @@ pam_set_data(pam_handle_t *pamh, const char *module_data_name, void *data,
     void (*cleanup)(pam_handle_t *pamh, void *data, int pam_end_status))
 {
 	struct pam_module_data *psd;
+
+	if (pamh == NULL)
+		return (PAM_SYSTEM_ERR);
 
 	pam_trace(PAM_DEBUG_DATA,
 	    "pam_set_data(%p:%s:%d)=%p", (void *)pamh,
