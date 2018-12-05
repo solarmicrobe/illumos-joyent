@@ -44,7 +44,7 @@ LDFLAGS +=	$(LLDFLAGS)
 
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=indenting
+SMOFF += indenting
 
 LDLIBS +=	$(CONVLIBDIR) $(CONV_LIB) $(ELFLIBDIR) -lelf
 LINTFLAGS +=	-x

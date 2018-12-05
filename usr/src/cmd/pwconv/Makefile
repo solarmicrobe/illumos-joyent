@@ -31,7 +31,7 @@ TEXT_DOMAIN= SUNW_OST_ADMIN
 FILEMODE=       0555
 RELSBIN=        ../sbin
 
-CERRWARN += -_smatch=--disable=indenting
+SMOFF += indenting
 
 .KEEP_STATE:
 

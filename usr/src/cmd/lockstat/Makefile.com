@@ -35,7 +35,7 @@ CFLAGS += $(CCVERBOSE)
 CFLAGS64 += $(CCVERBOSE)
 CERRWARN += -_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=index_overflow
+SMOFF += index_overflow
 
 LINTFLAGS += -xerroff=E_SEC_SPRINTF_UNBOUNDED_COPY
 LINTFLAGS64 += -xerroff=E_SEC_SPRINTF_UNBOUNDED_COPY

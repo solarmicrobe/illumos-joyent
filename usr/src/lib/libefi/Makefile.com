@@ -43,7 +43,7 @@ CFLAGS +=	$(CCVERBOSE)
 
 LINTFLAGS64 +=	-errchk=longptr64
 
-CERRWARN += -_smatch=--disable=kmalloc_wrong_size
+SMOFF += kmalloc_wrong_size
 
 .KEEP_STATE:
 

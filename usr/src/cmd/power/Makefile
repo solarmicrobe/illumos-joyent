@@ -82,7 +82,7 @@ $(ROOTETCFILES) := FILEMODE= 644
 #
 CFLAGS += $(CCVERBOSE)
 
-CERRWARN += -_smatch=--disable=signed
+SMOFF += signed
 
 .PARALLEL: $(OBJS)
 

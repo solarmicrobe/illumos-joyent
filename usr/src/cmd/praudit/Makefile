@@ -45,7 +45,7 @@ CPPFLAGS += -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
 CERRWARN += -_gcc=-Wno-parentheses
 CERRWARN += -_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=signed
+SMOFF += signed
 
 LDLIBS += -lbsm -lnsl -lpam -ltsol
 

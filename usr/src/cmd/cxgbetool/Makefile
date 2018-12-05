@@ -20,7 +20,7 @@ include ../Makefile.cmd
 
 CFLAGS += $(CCVERBOSE) -I$(SRC)/uts/common/io/cxgbe/t4nex -I$(SRC)/uts/common/io/cxgbe/firmware
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 all: $(PROG)
 

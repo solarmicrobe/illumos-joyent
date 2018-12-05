@@ -39,7 +39,7 @@ LDLIBS += -ladm
 CERRWARN += -_gcc=-Wno-parentheses
 CERRWARN += -_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=signed
+SMOFF += signed
 
 .KEEP_STATE:
 

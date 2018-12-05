@@ -43,7 +43,7 @@ LDLIBS += -lc -lscf -lsecdb -lm
 CFLAGS += $(CCVERBOSE)
 CPPFLAGS += -I$(SRCDIR)
 
-CERRWARN += -_smatch=--disable=signed
+SMOFF += signed
 
 .KEEP_STATE:
 

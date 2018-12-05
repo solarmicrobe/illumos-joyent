@@ -47,7 +47,7 @@ $(LINTLIB) lint :=	LINTFLAGS64 += -erroff=E_BAD_PTR_CAST_ALIGN
 
 CERRWARN	+= -_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=missing_break
+SMOFF += missing_break
 
 .KEEP_STATE:
 

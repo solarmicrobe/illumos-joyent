@@ -49,7 +49,7 @@ POFILE=		ndmpstat.po
 
 LDLIBS += -lndmp
 
-CERRWARN += -_smatch=--disable=signed
+SMOFF += signed
 
 .KEEP_STATE:
 

@@ -47,7 +47,7 @@ CPPFLAGS +=	-I$(SRCDIR) -I$(BERDIR)
 CERRWARN +=	-_gcc=-Wno-unused-function
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=shift_to_zero
+SMOFF += shift_to_zero
 
 .KEEP_STATE:
 

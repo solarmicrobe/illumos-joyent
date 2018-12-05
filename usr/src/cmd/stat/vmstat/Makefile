@@ -37,7 +37,7 @@ CERRWARN += -_gcc=-Wno-switch
 CERRWARN += -_gcc=-Wno-uninitialized
 CERRWARN += -_gcc=-Wno-parentheses
 
-CERRWARN += -_smatch=--disable=signed
+SMOFF += signed
 
 FILEMODE= 0555
 

@@ -41,7 +41,7 @@ FILEMODE= 0555
 
 lint := LINTFLAGS = -muxs -I$(STATCOMMONDIR)
 
-CERRWARN += -_smatch=--disable=signed
+SMOFF += signed
 
 .KEEP_STATE:
 

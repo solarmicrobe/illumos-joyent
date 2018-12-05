@@ -34,7 +34,7 @@ LDLIBS += -lzonecfg -lcontract
 CERRWARN += -_gcc=-Wno-parentheses
 CERRWARN += -_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=leaks
+SMOFF += leaks
 
 .KEEP_STATE:
 

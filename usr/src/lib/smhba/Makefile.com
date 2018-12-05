@@ -50,7 +50,7 @@ CERRWARN +=	-_gcc=-Wno-unused-variable
 CERRWARN +=	-_gcc=-Wno-uninitialized
 CERRWARN +=	-_gcc=-Wno-unused-function
 
-CERRWARN += -_smatch=--disable=indenting,all_func_returns
+SMOFF += indenting,all_func_returns
 
 LDLIBS +=	-lc
 

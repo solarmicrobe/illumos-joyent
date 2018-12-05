@@ -31,7 +31,7 @@ CSTD=	$(CSTD_GNU99)
 C99LMODE=	-Xc99=%all
 LINTFLAGS +=	-I. -erroff=E_CONSTANT_CONDITION
 
-CERRWARN += -_smatch=--disable=leaks
+SMOFF += leaks
 
 # install rules
 $(ROOTINC)/% : %

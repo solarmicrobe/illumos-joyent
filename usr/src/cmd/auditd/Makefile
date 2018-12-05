@@ -40,7 +40,7 @@ CPPFLAGS += -I$(LIBBSM) -I$(AUDITD)
 
 CERRWARN += -_gcc=-Wno-parentheses
 
-CERRWARN += -_smatch=--disable=macros
+SMOFF += macros
 
 LDLIBS += -lbsm -lsecdb
 

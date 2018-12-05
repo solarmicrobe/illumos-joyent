@@ -49,7 +49,7 @@ CPPFLAGS +=	-I$(SRCDIR)
 
 CERRWARN +=	-_gcc=-Wno-parentheses
 
-CERRWARN += -_smatch=--disable=index_overflow
+SMOFF += index_overflow
 
 .KEEP_STATE:
 

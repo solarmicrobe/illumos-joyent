@@ -72,7 +72,7 @@ LINTFLAGS64 +=	-u -erroff=E_CAST_INT_TO_SMALL_INT
 CERRWARN +=	-_gcc=-Wno-parentheses
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=indenting
+SMOFF += indenting
 
 BUILD.AR=	$(RM) $@ ; \
 		$(AR) q $@ `$(LORDER) $(OBJECTS:%=$(DIR)/%)| $(TSORT)`

@@ -48,7 +48,7 @@ CPPFLAGS += -DDEBUG
 CERRWARN += -_gcc=-Wno-unused-value
 CERRWARN += -_gcc=-Wno-parentheses
 
-CERRWARN += -_smatch=--disable=no_if_block
+SMOFF += no_if_block
 
 .KEEP_STATE:
 

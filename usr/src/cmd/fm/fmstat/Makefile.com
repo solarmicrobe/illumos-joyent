@@ -48,7 +48,7 @@ LDLIBS += -L$(ROOT)/usr/lib/fm -lfmd_adm
 LDFLAGS += -R/usr/lib/fm
 LINTFLAGS += -mnu
 
-CERRWARN += -_smatch=--disable=signed
+SMOFF += signed
 
 .NO_PARALLEL:
 .PARALLEL: $(OBJS) $(LINTFILES)

@@ -37,7 +37,7 @@ XGETFLAGS += -a -x cfgadm.xcl
 LDLIBS += -lcfgadm
 LINTFLAGS += $(ENVLDFLAGS1) $(ENVLDFLAGS2) $(ENVLDFLAGS3) $(LDLIBS)
 
-CERRWARN += -_smatch=--disable=snprintf_overflow
+SMOFF += snprintf_overflow
 
 .KEEP_STATE:
 

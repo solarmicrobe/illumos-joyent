@@ -51,7 +51,7 @@ CERRWARN += -_gcc=-Wno-unused-label
 CERRWARN += -_gcc=-Wno-parentheses
 CERRWARN += -_gcc=-Wno-switch
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 CTFCONVO = $(CTFCONVERT_O)
 CTFMRG = $(CTFMERGE) -L VERSION -o $@ $(OBJS)

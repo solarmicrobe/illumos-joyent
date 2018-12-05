@@ -39,7 +39,7 @@ LDFLAGS += -R/usr/lib/smbsrv
 
 CERRWARN += -_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=free
+SMOFF += free
 
 all:		$(PROG)
 

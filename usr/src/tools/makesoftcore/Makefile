@@ -25,7 +25,7 @@ SRCS=		makesoftcore.c lz4.c
 LDLIBS=		-lumem
 
 # not linted
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 .KEEP_STATE:
 

@@ -109,7 +109,7 @@ CERRWARN += -_gcc=-Wno-parentheses
 CERRWARN += -_gcc=-Wno-unused-label
 CERRWARN += -_gcc=-Wno-unused-variable
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 #
 # -erroff=E_INCONS_ARG_DECL2 works around a problem where lint gets confused

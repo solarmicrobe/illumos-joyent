@@ -41,7 +41,7 @@ CFLAGS += $(CCVERBOSE)
 CERRWARN += -_gcc=-Wno-parentheses
 CERRWARN += -_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=indenting
+SMOFF += indenting
 
 LINTFLAGS += -m -v -u $(LDFLAGS)
 

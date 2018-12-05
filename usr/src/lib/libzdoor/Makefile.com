@@ -37,7 +37,7 @@ CPPFLAGS +=	-I$(SRCDIR) -D_REENTRANT -D_FILE_OFFSET_BITS=64
 LIBS =		$(DYNLIB) $(LINTLIB)
 LDLIBS +=	-lc -lzonecfg -lcontract
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 $(LINTLIB) :=	SRCS=	$(SRCDIR)/$(LINTSRC)
 

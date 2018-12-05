@@ -66,7 +66,7 @@ LDLIBS +=	-lc
 
 CERRWARN +=	-_gcc=-Wno-unused-variable
 
-CERRWARN += -_smatch=--disable=no_if_block
+SMOFF += no_if_block
 
 .KEEP_STATE:
 

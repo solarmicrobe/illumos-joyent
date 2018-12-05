@@ -41,7 +41,7 @@ CPPFLAGS =	-I$(SRC)/cmd/bhyve \
 		-DWITHOUT_CAPSICUM
 CPPFLAGS +=	-I$(COMPAT)/freebsd/amd64 -I$(CONTRIB)/freebsd/amd64
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 CLEANFILES +=	$(EXETESTS)
 CLOBBERFILES +=	$(ROOTTESTS)

@@ -87,7 +87,7 @@ CERRWARN +=	-_gcc=-Wno-unused-variable
 CERRWARN +=	-_gcc=-Wno-parentheses
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=all_func_returns,indenting,no_if_block
+SMOFF += all_func_returns,indenting,no_if_block
 
 LDLIBS +=	-lc
 

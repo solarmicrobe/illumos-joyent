@@ -27,7 +27,7 @@ CPPFLAGS +=	-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
 
 CFLAGS += $(CCVERBOSE)
 
-CERRWARN += -_smatch=--disable=missing_break
+SMOFF += missing_break
 
 .KEEP_STATE:
 

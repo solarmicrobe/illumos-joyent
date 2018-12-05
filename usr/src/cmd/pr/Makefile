@@ -34,7 +34,7 @@ DCFILE = $(PROG).dc
 
 CERRWARN += -_gcc=-Wno-parentheses
 
-CERRWARN += -_smatch=--disable=indenting
+SMOFF += indenting
 
 $(XPG4):= CPPFLAGS += -DXPG4
 $(POFILE) := XGETFLAGS += -a -x pr.xcl

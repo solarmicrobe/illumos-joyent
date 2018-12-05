@@ -38,7 +38,7 @@ CERRWARN += -_gcc=-Wno-parentheses
 CERRWARN += -_gcc=-Wno-uninitialized
 CERRWARN += -_gcc=-Wno-clobbered
 
-CERRWARN += -_smatch=--disable=missing_break
+SMOFF += missing_break
 
 .KEEP_STATE:
 

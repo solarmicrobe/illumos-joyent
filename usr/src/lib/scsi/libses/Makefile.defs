@@ -34,7 +34,7 @@ CERRWARN += -_gcc=-Wno-type-limits
 CERRWARN += -_gcc=-Wno-uninitialized
 CERRWARN += -_gcc=-Wno-unused-label
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 ROOTLIBDIR = $(ROOTSCSILIBDIR)
 ROOTLIBDIR64 = $(ROOTSCSILIBDIR)/$(MACH64)

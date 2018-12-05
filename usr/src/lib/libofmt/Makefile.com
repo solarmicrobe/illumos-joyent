@@ -30,7 +30,7 @@ SRCS=		$(SRCDIR)/ofmt.c
 $(LINTLIB)	:= SRCS = $(SRCDIR)/$(LINTSRC)
 LDLIBS +=	-lc
 
-CERRWARN += -_smatch=--disable=kmalloc_wrong_size
+SMOFF += kmalloc_wrong_size
 
 .KEEP_STATE:
 

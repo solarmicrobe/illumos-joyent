@@ -58,7 +58,7 @@ LINTFLAGS64 += -erroff=E_STATIC_UNUSED
 CERRWARN += -_gcc=-Wno-switch
 
 # false positive
-CERRWARN += -_smatch=--disable=signed
+SMOFF += signed
 
 .KEEP_STATE:
 

@@ -43,7 +43,7 @@ $(RELEASE_BUILD)CPPFLAGS +=     -DNDEBUG
 CERRWARN += -_gcc=-Wno-switch
 CERRWARN += -_gcc=-Wno-unused-label
 
-CERRWARN += -_smatch=--disable=kmalloc_wrong_size
+SMOFF += kmalloc_wrong_size
 
 LDLIBS    += -lsocket -lnsl -lrestart -lscf -lcontract -linetutil \
 		-lwrap -linetsvc -luutil -lumem -lbsm

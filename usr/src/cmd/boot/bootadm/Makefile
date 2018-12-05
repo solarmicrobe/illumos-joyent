@@ -52,7 +52,7 @@ CFLAGS +=	$(XSTRCONST)
 CPPFLAGS +=	-D_FILE_OFFSET_BITS=64
 CPPFLAGS +=	-I$(SRC)/uts/common -I$(SRC)/common -I$(SRC)/common/ficl
 
-CERRWARN +=	-_smatch=--disable=all_func_returns
+SMOFF +=	all_func_returns
 
 CSTD=	$(CSTD_GNU99)
 

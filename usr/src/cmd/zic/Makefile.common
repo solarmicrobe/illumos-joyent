@@ -14,4 +14,4 @@ SRCS=		$(OBJS:%.o=%.c)
 CERRWARN +=	-_gcc=-Wno-unused-variable
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
-CERRWARN +=	-_smatch=--disable=signed
+SMOFF +=	signed

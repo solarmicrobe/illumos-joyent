@@ -30,7 +30,7 @@ include		../Makefile.cmd
 
 CERRWARN += -_gcc=-Wno-parentheses
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 .KEEP_STATE:
 

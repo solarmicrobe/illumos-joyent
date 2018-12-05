@@ -24,7 +24,7 @@ include ../../Makefile.ctf
 LDLIBS += -lficl-sys -ltecla -lumem
 CPPFLAGS += -D_FILE_OFFSET_BITS=64 -I$(SRC)/common/ficl
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 .KEEP_STATE:
 

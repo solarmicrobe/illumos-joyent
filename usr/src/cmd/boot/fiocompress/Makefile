@@ -40,8 +40,7 @@ LDLIBS +=	-lz
 CFLAGS +=	-I../../../uts/common
 LINTFLAGS +=	-I../../../uts/common
 
-# not linted
-CERRWARN += 	-_smatch=--disable=leaks
+SMOFF += 	leaks
 
 all: $(PROG)
 

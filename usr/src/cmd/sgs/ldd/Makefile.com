@@ -49,7 +49,7 @@ LDLIBS +=	$(CONVLIBDIR) $(CONV_LIB) -lelf $(DLLIB)
 LINTFLAGS +=	-x
 LINTFLAGS64 +=	-x
 
-CERRWARN += -_smatch=--disable=or_vs_and
+SMOFF += or_vs_and
 
 BLTDEFS=        msg.h
 BLTDATA=        msg.c

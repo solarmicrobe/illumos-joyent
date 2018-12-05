@@ -30,7 +30,7 @@ PROG= diskscan
 
 include ../Makefile.cmd
 
-CERRWARN += -_smatch=--disable=leaks
+SMOFF += leaks
 
 .KEEP_STATE:
 

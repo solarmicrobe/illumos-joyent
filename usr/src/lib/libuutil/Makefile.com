@@ -74,7 +74,7 @@ CPPFLAGS +=	-I$(SRCDIR) -I../../common/inc
 LINTFLAGS +=	-erroff=E_GLOBAL_COULD_BE_STATIC2
 LINTFLAGS64 +=	-erroff=E_GLOBAL_COULD_BE_STATIC2
 
-CERRWARN += -_smatch=--disable=signed
+SMOFF += signed
 
 MY_NATIVE_CPPFLAGS = -DNATIVE_BUILD -I$(SRCDIR)
 MY_NATIVE_LDLIBS = -lc

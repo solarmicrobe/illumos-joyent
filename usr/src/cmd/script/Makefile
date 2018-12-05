@@ -31,7 +31,7 @@ FILEMODE= 0555
 
 CERRWARN += -_gcc=-Wno-unused-variable
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 .KEEP_STATE:
 

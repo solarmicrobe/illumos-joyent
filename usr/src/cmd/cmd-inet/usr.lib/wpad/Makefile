@@ -38,7 +38,7 @@ all install := LDLIBS += -lsunw_crypto
 
 LINTFLAGS += 	-u
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 .KEEP_STATE:
 

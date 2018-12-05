@@ -74,7 +74,7 @@ CERRWARN += -_gcc=-Wno-switch
 CERRWARN += -_gcc=-Wno-uninitialized
 
 # these look like real bugs here, but ...
-CERRWARN += -_smatch=--disable=impossible_mask,signed_integer_overflow_check
+SMOFF += impossible_mask,signed_integer_overflow_check
 
 $(OBJS) := CPPFLAGS += -D_FILE_OFFSET_BITS=64 -D_REENTRANT
 

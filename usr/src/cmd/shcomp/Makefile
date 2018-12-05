@@ -64,7 +64,7 @@ CFLAGS64 += \
 
 CERRWARN +=	-_gcc=-Wno-parentheses
 
-CERRWARN +=	-_smatch=--disable=all_func_returns
+SMOFF +=	all_func_returns
 
 ROOTCMDDIR=$(ROOT)/usr/bin
 

@@ -44,7 +44,7 @@ LDLIBS += -lnsl -lbsm -lscf -ltsol
 CERRWARN += -_gcc=-Wno-uninitialized
 CERRWARN += -_gcc=-Wno-parentheses
 
-CERRWARN += -_smatch=--disable=indenting,no_if_block
+SMOFF += indenting,no_if_block
 
 .KEEP_STATE:
 

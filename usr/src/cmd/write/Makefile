@@ -38,7 +38,7 @@ XGETFLAGS += -a -x write.xcl
 CFLAGS += $(CCVERBOSE)
 CERRWARN += -_gcc=-Wno-unused-variable
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 all: $(PROG)
 

@@ -48,7 +48,7 @@ CPPFLAGS=	-I. -I../common -I../../include \
 		$(CPPFLAGS.master) -I$(ELFCAP)
 CFLAGS +=	$(C_PICFLAGS)
 
-CERRWARN += -_smatch=--disable=indenting
+SMOFF += indenting
 
 lint :=		ZRECORD =
 LDLIBS +=	$(ZRECORD) -lmapmalloc -lc $(DLLIB)

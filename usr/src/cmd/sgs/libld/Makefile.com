@@ -95,7 +95,7 @@ CERRWARN += -_gcc=-Wno-switch
 CERRWARN += -_gcc=-Wno-char-subscripts
 CERRWARN += -_gcc=-Wno-type-limits
 
-CERRWARN += -_smatch=--disable=no_if_block
+SMOFF += no_if_block
 
 # Location of the shared relocation engines maintained under usr/src/uts.
 #

@@ -36,7 +36,7 @@ CERRWARN += -_gcc=-Wno-unused-function
 CERRWARN += -_gcc=-Wno-uninitialized
 CERRWARN += -_gcc=-Wno-parentheses
 
-CERRWARN += -_smatch=--disable=strcpy_overflow
+SMOFF += strcpy_overflow
 
 %.o: $(COMMON_DIR)/%.c
 	$(COMPILE.c) $<

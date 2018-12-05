@@ -30,4 +30,4 @@ SRCS =		uscsi.c
 
 include ../../Makefile.engine
 
-CERRWARN += -_smatch=--disable=signed
+SMOFF += signed

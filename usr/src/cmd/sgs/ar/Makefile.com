@@ -44,7 +44,7 @@ CSTD=	$(CSTD_GNU99)
 
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=signed
+SMOFF += signed
 
 LDLIBS +=	-lelf $(CONVLIBDIR) $(CONV_LIB) -lsendfile
 LINTFLAGS=	-x

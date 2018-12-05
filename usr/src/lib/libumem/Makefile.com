@@ -130,7 +130,7 @@ ASFLAGS += -P $(ASFLAGS_$(CURTYPE)) -D_ASM
 CERRWARN += -_gcc=-Wno-switch
 CERRWARN += -_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=deref_check
+SMOFF += deref_check
 
 $(LINTLIB) := SRCS = ../common/$(LINTSRC)
 

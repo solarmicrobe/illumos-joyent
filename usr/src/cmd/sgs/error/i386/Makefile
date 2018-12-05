@@ -44,7 +44,7 @@ CSTD=	$(CSTD_GNU99)
 CERRWARN +=	-_gcc=-Wno-uninitialized
 CERRWARN +=	-_gcc=-Wno-parentheses
 
-CERRWARN += -_smatch=--disable=no_if_block,indenting
+SMOFF += no_if_block,indenting
 
 CLEANFILES +=	$(LINTOUT)
 

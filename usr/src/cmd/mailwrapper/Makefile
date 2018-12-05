@@ -50,7 +50,7 @@ CPPFLAGS =	-I. $(CPPFLAGS.master)
 
 LINTFLAGS	+= -erroff=E_FUNC_RET_ALWAYS_IGNOR2
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 # conditional assignments
 #

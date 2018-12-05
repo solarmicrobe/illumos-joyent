@@ -52,7 +52,7 @@ CFLAGS64 += $(CCVERBOSE) $(C_BIGPICFLAGS64)
 
 CERRWARN += -_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 LDLIBS += -lc -luutil -ldtrace -lproc
 

@@ -47,7 +47,7 @@ LDLIBS += -lSMHBAAPI
 
 CERRWARN += -_gcc=-Wno-unused-value
 
-CERRWARN += -_smatch=--disable=indenting
+SMOFF += indenting
 
 INCS += -I.
 INCS += -I$(SRC)/lib/smhba/common

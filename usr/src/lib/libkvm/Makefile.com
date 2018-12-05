@@ -49,7 +49,7 @@ CPPFLAGS = -D_KMEMUSER -D_LARGEFILE64_SOURCE=1 -I.. $(CPPFLAGS.master)
 
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=signed
+SMOFF += signed
 
 CLOBBERFILES += test test.o
 

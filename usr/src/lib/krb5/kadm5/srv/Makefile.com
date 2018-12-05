@@ -94,7 +94,7 @@ CERRWARN +=	-_gcc=-Wno-parentheses
 CERRWARN +=	-_gcc=-Wno-type-limits
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=all_func_returns,indenting
+SMOFF += all_func_returns,indenting
 
 .KEEP_STATE:
 

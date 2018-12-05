@@ -70,7 +70,7 @@ CFLAGS +=	$(CCVERBOSE) -I..
 CERRWARN +=	-_gcc=-Wno-switch
 CERRWARN +=	-_gcc=-Wno-unused-variable
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 DYNFLAGS +=	$(KRUNPATH) $(KMECHLIB) $(ZIGNORE)
 

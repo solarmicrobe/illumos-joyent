@@ -54,7 +54,7 @@ CERRWARN += -_gcc=-Wmissing-braces
 CERRWARN += -_gcc=-Wsign-compare
 CERRWARN += -_gcc=-Wmissing-field-initializers
 
-CERRWARN += -_smatch=--disable=64bit_shift
+SMOFF += 64bit_shift
 
 # lint complains about unused _umem_* functions
 LINTFLAGS += -xerroff=E_NAME_DEF_NOT_USED2

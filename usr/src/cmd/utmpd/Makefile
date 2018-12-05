@@ -35,7 +35,7 @@ ROOTMANIFESTDIR = $(ROOTSVCSYSTEM)
 
 FILEMODE = 555
 
-CERRWARN += -_smatch=--disable=signed
+SMOFF += signed
 
 .KEEP_STATE:
 

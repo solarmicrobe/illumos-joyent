@@ -21,7 +21,7 @@ include ../Makefile.tools
 LDLIBS	+= -lnvpair
 CPPFLAGS += -I$(SRC)/lib/json_nvlist/ -I$(SRC)/lib/libcustr/common
 
-CERRWARN += -_smatch=--disable=signed
+SMOFF += signed
 
 all: $(PROG)
 

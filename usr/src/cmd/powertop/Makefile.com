@@ -45,7 +45,7 @@ CFLAGS64	+= $(CCVERBOSE)
 CERRWARN	+= -_gcc=-Wno-parentheses
 CERRWARN	+= -_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=free
+SMOFF += free
 
 LDLIBS		+= -lcurses -ldtrace -lkstat
 

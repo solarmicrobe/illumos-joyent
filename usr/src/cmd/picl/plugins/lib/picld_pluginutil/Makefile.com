@@ -55,7 +55,7 @@ CPPFLAGS +=	-I.. -I$(SRC)/lib/libpicl -I$(SRC)/lib/libpicltree
 CFLAGS +=	$(CCVERBOSE)
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 CPPFLAGS +=	-D_REENTRANT
 DYNFLAGS +=	$(ZNOLAZYLOAD)

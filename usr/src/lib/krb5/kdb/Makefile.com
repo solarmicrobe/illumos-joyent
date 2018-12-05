@@ -88,7 +88,7 @@ CERRWARN +=	-_gcc=-Wno-type-limits
 CERRWARN +=	-_gcc=-Wno-uninitialized
 CERRWARN +=	-_gcc=-Wno-parentheses
 
-CERRWARN += -_smatch=--disable=indenting,all_func_returns,deref_check,signed
+SMOFF += indenting,all_func_returns,deref_check,signed
 
 DYNFLAGS +=	$(KRUNPATH) $(KMECHLIB)
 LDLIBS +=	-lc -lnsl

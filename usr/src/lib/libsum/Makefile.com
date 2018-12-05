@@ -77,7 +77,7 @@ CFLAGS64 += \
 
 CERRWARN	+= -_gcc=-Wno-parentheses
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 # This codepath is performance-critical
 sparc_COPTFLAG=-xO5 -_cc=-xprefetch=auto,explicit

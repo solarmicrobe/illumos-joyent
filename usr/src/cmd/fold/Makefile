@@ -30,7 +30,7 @@ include ../Makefile.cmd
 
 CFLAGS  += $(CCVERBOSE)
 
-CERRWARN += -_smatch=--disable=index_overflow
+SMOFF += index_overflow
 
 .KEEP_STATE:
 

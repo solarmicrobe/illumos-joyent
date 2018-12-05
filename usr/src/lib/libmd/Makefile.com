@@ -43,6 +43,6 @@ CFLAGS +=	$(CCVERBOSE)
 CPPFLAGS +=	-I$(SRCDIR)
 LDLIBS +=	-lc
 
-CERRWARN += -_smatch=--disable=64bit_shift
+SMOFF += 64bit_shift
 
 $(LINTLIB) :=	SRCS = $(SRCDIR)/$(LINTSRC)

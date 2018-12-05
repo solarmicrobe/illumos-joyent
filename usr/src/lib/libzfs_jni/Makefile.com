@@ -50,7 +50,7 @@ CPPFLAGS +=	$(INCS)
 $(NOT_RELEASE_BUILD) CPPFLAGS += -DDEBUG
 CERRWARN +=	-_gcc=-Wno-switch
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 SRCDIR =	../common
 $(LINTLIB) := SRCS=	$(SRCDIR)/$(LINTSRC)

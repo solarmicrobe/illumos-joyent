@@ -36,7 +36,7 @@ include ../../Makefile.cmd.64
 CFLAGS64	+= $(CCVERBOSE)
 CERRWARN	+= -_gcc=-Wno-parentheses
 
-CERRWARN += -_smatch=--disable=strcpy_overflow
+SMOFF += strcpy_overflow
 
 FILEMODE= 04555
 

@@ -129,7 +129,7 @@ LDFLAGS64		+= $(ZTEXT)
 ASFLAGS			+= -P
 AS_CPPFLAGS		+= -D_ASM
 
-CERRWARN += -_smatch=--disable=all_func_returns,index_overflow
+SMOFF += all_func_returns,index_overflow
 
 # Module type-specific compiler flags
 $(MODOBJS) :=			CFLAGS += $(C_BIGPICFLAGS) $(XREGSFLAG)

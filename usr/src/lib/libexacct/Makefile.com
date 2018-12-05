@@ -45,7 +45,7 @@ CFLAGS += 	$(CCVERBOSE)
 CERRWARN +=	-_gcc=-Wno-uninitialized
 CPPFLAGS +=	-D_FILE_OFFSET_BITS=64
 
-CERRWARN += -_smatch=--disable=missing_break
+SMOFF += missing_break
 
 debug :=	CPPFLAGS += -DLIBEXACCT_DEBUG
 debug :=	COPTFLAG = -g

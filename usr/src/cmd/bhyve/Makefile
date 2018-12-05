@@ -123,7 +123,7 @@ pci_nvme.o := CERRWARN += -_gcc=-Wno-pointer-sign
 # main() is too hairy for smatch
 bhyvectl.o := CERRWARN += $(DISABLE_SMATCH)
 
-CERRWARN += -_smatch=--disable=all_func_returns,leaks
+SMOFF += all_func_returns,leaks
 
 # Force c99 for everything
 CSTD=		$(CSTD_GNU99)

@@ -40,7 +40,7 @@ CFLAGS +=	$(CCVERBOSE)
 CERRWARN +=	-_gcc=-Wno-type-limits
 CERRWARN +=	-_gcc=-Wno-unused-label
 
-CERRWARN += -_smatch=--disable=snprintf_overflow
+SMOFF += snprintf_overflow
 
 .KEEP_STATE:
 
