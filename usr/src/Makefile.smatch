@@ -16,17 +16,21 @@
 # simply too much legacy).
 #
 
-SMATCH_ARGS += -_smatch=--disable=uninitialized,check_check_deref,unreachable
-SMATCH_ARGS += -_smatch=-Wno-vla
-SMATCH_ARGS += -_smatch=-Wno-one-bit-signed-bitfield
+SMATCH_ARGS = --disable=uninitialized,check_check_deref,unreachable
 
+# VLAs are OK by us
+SMATCH_ARGS += -Wno-vla
+# don't care
+SMATCH_ARGS += -Wno-one-bit-signed-bitfield
 # there are lots of "extern void myfunc() { ... }" around
-SMATCH_ARGS += -_smatch=-Wno-external-function-has-definition
+SMATCH_ARGS += -Wno-external-function-has-definition
 # disable warnings about e.g. "int a = 0x100000000"
-SMATCH_ARGS += -_smatch=-Wno-big-constants
+SMATCH_ARGS += -Wno-big-constants
 # we have lots of legacy "void foo();" in headers
-SMATCH_ARGS += -_smatch=-Wno-non-ansi-function-declaration
+SMATCH_ARGS += -Wno-non-ansi-function-declaration
 
-CERRWARN += $(SMATCH_ARGS)
+CERRWARN += $(SMATCH_ARGS:%=-_smatch=%)
+
+CERRWARN += $(SMOFF:%=-_smatch=--disable=%)
 
 DISABLE_SMATCH = -_smatch=off

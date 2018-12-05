@@ -44,7 +44,7 @@ CFLAGS64 += $(CCVERBOSE) $(C_BIGPICFLAGS)
 CERRWARN += -_gcc=-Wno-switch
 CERRWARN += -_gcc=-Wno-uninitialized
 
-CERRWARN += -_smatch=--disable=all_func_returns
+SMOFF += all_func_returns
 
 LDLIBS += -lnvpair -lc
 

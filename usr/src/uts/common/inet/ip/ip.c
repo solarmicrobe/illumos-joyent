@@ -14026,7 +14026,7 @@ ip_kstat_update(kstat_t *kp, int rw)
 	netstack_t	*ns;
 	ip_stack_t	*ipst;
 
-	if (kp == NULL || kp->ks_data == NULL)
+	if (kp->ks_data == NULL)
 		return (EIO);
 
 	if (rw == KSTAT_WRITE)
@@ -14163,7 +14163,7 @@ icmp_kstat_update(kstat_t *kp, int rw)
 	netstack_t	*ns;
 	ip_stack_t	*ipst;
 
-	if ((kp == NULL) || (kp->ks_data == NULL))
+	if (kp->ks_data == NULL)
 		return (EIO);
 
 	if (rw == KSTAT_WRITE)

@@ -5187,7 +5187,7 @@ rawip_kstat_update(kstat_t *ksp, int rw)
 	netstack_t	*ns;
 	icmp_stack_t	*is;
 
-	if ((ksp == NULL) || (ksp->ks_data == NULL))
+	if (ksp->ks_data == NULL)
 		return (EIO);
 
 	if (rw == KSTAT_WRITE)

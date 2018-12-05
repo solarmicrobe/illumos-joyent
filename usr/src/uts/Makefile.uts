@@ -228,8 +228,17 @@ $(RELEASE_BUILD)CERRWARN += -_gcc=-Wno-unused
 $(RELEASE_BUILD)CERRWARN += -_gcc=-Wno-empty-body
 
 CERRWARN += -_smatch=-p=illumos_kernel
-
 include $(SRC)/Makefile.smatch
+
+#
+# Unfortunately, _IOWR() is regularly used with a third argument of 0,
+# so we have to disable all these smatch checks.
+#
+SMOFF += sizeof
+#
+# smatch doesn't yet understand /* FALLTHROUGH */
+#
+SMOFF += missing_break
 
 CSTD = $(CSTD_GNU99)
 
