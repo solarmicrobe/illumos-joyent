@@ -45,7 +45,7 @@ LDLIBS +=	-lc -lnvpair
 CPPFLAGS +=	$(INCS)
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 $(LINTLIB) := SRCS=	$(SRCDIR)/$(LINTSRC)
 

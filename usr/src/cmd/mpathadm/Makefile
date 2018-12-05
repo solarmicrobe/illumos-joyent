@@ -38,7 +38,7 @@ LDLIBS += -lMPAPI -ldevid
 LINTFLAGS += -xerroff=E_BAD_FORMAT_STR2
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

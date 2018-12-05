@@ -38,7 +38,7 @@ CPPFLAGS +=	-DSYSV -DBSD_COMP
 CERRWARN +=	-_gcc=-Wno-extra
 
 # "missing type for func"
-CERRWARN +=	$(DISABLE_SMATCH)
+SMATCH =	off
 
 .KEEP_STATE:
 

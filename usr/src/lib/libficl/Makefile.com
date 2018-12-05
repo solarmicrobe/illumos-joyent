@@ -38,7 +38,7 @@ CPPFLAGS +=	-I.. -I$(FICLDIR) -D_LARGEFILE64_SOURCE=1
 pics/vm.o := CERRWARN += -_gcc=-Wno-clobbered
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LDLIBS +=	-luuid -lc -lm -lumem
 

@@ -45,7 +45,7 @@ CERRWARN += -_gcc=-Wno-unused-function
 CERRWARN += -_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 $(XPG4) := CFLAGS += -DXPG4  
 $(XPG6) := CFLAGS += -DXPG6 -I$(SRC)/lib/libc/inc 

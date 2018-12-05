@@ -41,7 +41,7 @@ CFLAGS += $(CCVERBOSE)
 CERRWARN += -_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 CPPFLAGS += -DEUC
 

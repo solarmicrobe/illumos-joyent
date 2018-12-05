@@ -31,7 +31,7 @@ CERRWARN +=	-_gcc=-Wno-return-type
 CERRWARN +=	-_gcc=-Wno-clobbered
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 # Various components must export interfaces, but also contain name-space
 # clashes with system libraries.

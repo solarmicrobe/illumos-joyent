@@ -42,7 +42,7 @@ CERRWARN	+= -_gcc=-Wno-uninitialized
 CERRWARN	+= -_gcc=-Wno-switch
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 CSTD=	$(CSTD_GNU99)
 

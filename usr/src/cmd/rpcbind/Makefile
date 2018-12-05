@@ -48,7 +48,7 @@ $(RELEASE_BUILD)CPPFLAGS += -DNDEBUG
 LDLIBS += -lsocket -lnsl -lwrap -lscf -lumem
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

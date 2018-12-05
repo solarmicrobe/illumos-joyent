@@ -52,7 +52,7 @@ CFLAGS64 +=	$(XSTRCONST)
 CPPFLAGS +=	-I../include -I$(PLUGDIR)
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

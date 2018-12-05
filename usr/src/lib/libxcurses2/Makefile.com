@@ -101,7 +101,7 @@ CERRWARN += -_gcc=-Wno-uninitialized
 CERRWARN += -_gcc=-Wno-unused-value
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 #
 # If and when somebody gets around to messaging this, CLOBBERFILE should not

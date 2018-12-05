@@ -65,7 +65,7 @@ CERRWARN +=	-_gcc=-Wno-switch
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 TEXT_DOMAIN =	SUNW_OST_OSLIB
 XGETTEXT =	$(GNUXGETTEXT)

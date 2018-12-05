@@ -57,7 +57,7 @@ CERRWARN += -_gcc=-Wno-uninitialized
 CERRWARN += -_gcc=-Wno-unused-label
 
 # not linted, too much mess, but it should be
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LDLIBS +=  -lkmf -lpkcs11 -lcryptoutil
 

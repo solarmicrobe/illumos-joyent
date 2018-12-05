@@ -82,7 +82,7 @@ CERRWARN +=	-_gcc=-Wno-empty-body
 CERRWARN +=	-_gcc=-Wno-parentheses
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 ASFLAGS +=	-P
 

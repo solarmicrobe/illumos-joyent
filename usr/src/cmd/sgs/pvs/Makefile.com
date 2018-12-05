@@ -50,7 +50,7 @@ LINTFLAGS +=	-x
 LINTFLAGS64 +=	-x
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 BLTDEFS=	msg.h
 BLTDATA=	msg.c

@@ -166,7 +166,7 @@ CERRWARN +=	-_gcc=-Wno-uninitialized
 CERRWARN +=	-_gcc=-Wno-switch
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 # Extra includes, from yp, for yptol files.
 CPPFLAGS += -I$(SRC)/cmd/ypcmd

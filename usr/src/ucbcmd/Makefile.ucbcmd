@@ -60,7 +60,7 @@ ROOTPROG32=	$(PROG:%=$(ROOTBIN32)/%)
 ISAEXEC=	$(ROOT)/usr/lib/isaexec
 
 # don't lint any of ucbcmd
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 # storing LDLIBS in two macros allows reordering of options
 LDLIBS.cmd =    $(ENVLDLIBS1)  $(ENVLDLIBS2)  $(ENVLDLIBS3)

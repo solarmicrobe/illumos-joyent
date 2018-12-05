@@ -54,7 +54,7 @@ CPPFLAGS=	-I$(HERE) -I$(LOCAL) $(CPPFLAGS.master)
 FILEMODE= 	0555
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 $(GROUPADD) :=	OBJS = $(ADD_OBJ)
 $(GROUPADD) :=	LDLIBS += $(LIBUSRGRP) -lcmdutils

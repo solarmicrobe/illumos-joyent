@@ -64,7 +64,7 @@ CERRWARN += -_gcc=-Wno-unused-label
 CERRWARN += -_gcc=-Wno-unused-function
 
 # we really should have smatch running on this code but...
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

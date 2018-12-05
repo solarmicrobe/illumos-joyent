@@ -53,7 +53,7 @@ CFLAGS64 +=       -DSOLARIS
 CERRWARN +=	-_gcc=-Wno-unused-variable
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LINTFLAGS += -DSOLARIS
 LINTFLAGS64 += -DSOLARIS

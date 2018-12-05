@@ -42,7 +42,7 @@ CPPFLAGS	+= -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
 CERRWARN	+= -_gcc=-Wno-parentheses
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 ROOTLIBDIR=	$(ROOT)/usr/lib/security
 

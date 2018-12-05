@@ -48,7 +48,7 @@ CPPFLAGS +=	-D_REENTRANT -I$(UTSBASE)/common/brand/lx
 LDLIBS +=	-lzonecfg -lipadm -lsocket -linetutil -lnsl -lcustr -ldhcpagent
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

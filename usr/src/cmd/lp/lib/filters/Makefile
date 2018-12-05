@@ -54,7 +54,7 @@ CERRWARN +=	-_gcc=-Wno-uninitialized
 CERRWARN +=	-_gcc=-Wno-parentheses
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 POFILE =	lp_lib_filters.po
 

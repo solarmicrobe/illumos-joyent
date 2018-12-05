@@ -54,7 +54,7 @@ CERRWARN +=	-_gcc=-Wno-parentheses
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LDLIBS +=	-lsocket -lnsl -lnvpair -lipp
 

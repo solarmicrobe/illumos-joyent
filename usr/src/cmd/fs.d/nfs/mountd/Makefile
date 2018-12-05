@@ -46,7 +46,7 @@ CERRWARN +=	-_gcc=-Wno-uninitialized
 CERRWARN +=	-_gcc=-Wno-switch
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 $(TYPEPROG):	$(OBJS)
 		$(COMPILE.d) -s $(DSRC) -o $(DOBJ) $(OBJS)

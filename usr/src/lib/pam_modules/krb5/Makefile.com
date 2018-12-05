@@ -51,7 +51,7 @@ CERRWARN +=	-_gcc=-Wno-parentheses
 CERRWARN +=	-_gcc=-Wno-unused-function
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 # module needs to be unloadable because the key destructor might be
 # called after dlclose()

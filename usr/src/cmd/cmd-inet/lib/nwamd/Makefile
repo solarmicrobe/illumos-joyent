@@ -60,7 +60,7 @@ CERRWARN +=	-_gcc=-Wno-switch
 CERRWARN +=	-_gcc=-Wno-unused-label
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 #
 # Instrument with CTF data to ease debugging.

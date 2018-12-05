@@ -76,7 +76,7 @@ CPPFLAGS=	-I$(HERE) -I$(LOCAL) $(CPPFLAGS.master)
 CERRWARN +=	-_gcc=-Wno-implicit-function-declaration
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 $(INSSBINPROG)  := FILEMODE = 0555
 $(INSSYSADMPROG):= FILEMODE = 0500

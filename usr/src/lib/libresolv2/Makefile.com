@@ -113,7 +113,7 @@ CPPFLAGS +=	$(LOCFLAGS)
 CERRWARN +=	-_gcc=-Wno-implicit-function-declaration
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 DYNFLAGS +=	$(ZNODELETE)
 

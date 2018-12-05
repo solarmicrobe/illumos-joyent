@@ -98,7 +98,7 @@ CERRWARN +=	-_gcc=-Wno-unused-label
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LINTSRC= $(OBJECTS:%.o=$(SRCDIR)/%.c)
 

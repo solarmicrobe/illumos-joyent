@@ -55,7 +55,7 @@ DYNFLAGS +=     $(ZINTERPOSE)
 LDLIBS +=       -lc
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

@@ -80,7 +80,7 @@ OBJS +=		compat_ohash.o
 roff.o :=	CERRWARN += -_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 CFLAGS +=	$(CC_VERBOSE)
 CSTD=		$(CSTD_GNU99)

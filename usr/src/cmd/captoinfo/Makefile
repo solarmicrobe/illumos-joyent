@@ -38,7 +38,7 @@ CPPFLAGS +=	-I../../lib/libcurses/screen
 CERRWARN +=	-_gcc=-Wno-parentheses
 
 # code is a mess right now
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

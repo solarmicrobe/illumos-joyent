@@ -39,7 +39,7 @@ CERRWARN += -_gcc=-Wno-unused-variable
 CERRWARN += -_gcc=-Wno-uninitialized
 
 # missing prototypes
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 ROOTSYMLINK= $(ROOTBIN)/reset
 

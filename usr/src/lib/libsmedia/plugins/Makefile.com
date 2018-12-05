@@ -43,7 +43,7 @@ CLEANFILES=	$(LINTOUT) $(LINTPLUGIN)
 SRCDIR =	../common
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LINTFLAGS += -xu
 LINTFLAGS64 += -xu

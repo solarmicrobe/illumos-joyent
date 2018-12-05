@@ -48,7 +48,7 @@ CERRWARN += -_gcc=-Wno-extra
 CERRWARN += -_gcc=-Wno-unused-variable
 
 # unknown type for func
-CERRWARN +=  $(DISABLE_SMATCH)
+SMATCH=off
 
 MAPFILES = $(MAPFILE.INT) $(MAPFILE.NGB)
 LDFLAGS += $(MAPFILES:%=-M%)

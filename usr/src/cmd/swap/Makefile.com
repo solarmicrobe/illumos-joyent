@@ -36,7 +36,7 @@ CFLAGS64 +=	$(CCVERBOSE)
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 FILEMODE=02555
 

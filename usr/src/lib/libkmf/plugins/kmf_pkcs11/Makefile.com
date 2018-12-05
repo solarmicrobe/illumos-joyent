@@ -55,7 +55,7 @@ LINTFLAGS64	+=	-errchk=longptr64
 CERRWARN	+=	-_gcc=-Wno-unused-label
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 PICS=	$(OBJECTS:%=pics/%)
 

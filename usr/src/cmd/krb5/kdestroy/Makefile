@@ -17,7 +17,7 @@ CERRWARN += -_gcc=-Wno-implicit-function-declaration
 CERRWARN += -_gcc=-Wno-parentheses
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 POFILE = kdestroy.po 
 POFILES = generic.po 

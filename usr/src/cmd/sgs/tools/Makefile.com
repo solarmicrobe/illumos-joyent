@@ -69,4 +69,4 @@ ROOTPROGS=	$(PROGS:%=$(ROOTDIR)/bin/%)
 FILEMODE=	0755
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off

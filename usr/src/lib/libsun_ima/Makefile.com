@@ -52,7 +52,7 @@ CFLAGS64 +=	$(CCVERBOSE)
 CERRWARN +=	-_gcc=-Wno-parentheses
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 CPPFLAGS +=	-DSOLARIS
 

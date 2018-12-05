@@ -34,7 +34,7 @@ LDLIBS +=	-lsecdb
 FILEMODE =	0555
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

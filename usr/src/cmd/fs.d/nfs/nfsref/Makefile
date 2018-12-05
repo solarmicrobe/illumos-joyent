@@ -37,7 +37,7 @@ SRCS=	nfsref.c
 CERRWARN += -_gcc=-Wno-unused-variable
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LDLIBS += -lreparse -lnvpair -lnsl -lumem
 

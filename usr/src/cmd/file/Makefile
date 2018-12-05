@@ -45,7 +45,7 @@ CERRWARN += -_gcc=-Wno-uninitialized
 CERRWARN += -_gcc=-Wno-type-limits
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 POFILE= file_all.po
 POFILES= $(SRCS:%.c=%.po)

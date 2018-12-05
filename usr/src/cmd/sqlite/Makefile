@@ -42,7 +42,7 @@ $(OBJS) :=	CTFCONVERT_POST = $(CTFCONVERT_O)
 CERRWARN +=	-_gcc=-Wno-empty-body
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LDLIBS +=	-lsqlite-sys
 

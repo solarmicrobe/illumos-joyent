@@ -80,7 +80,7 @@ CERRWARN +=	-_gcc=-Wno-uninitialized
 CERRWARN +=	-_gcc=-Wno-extra
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 #
 # Message catalog

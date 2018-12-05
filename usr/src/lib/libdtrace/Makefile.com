@@ -137,7 +137,7 @@ CERRWARN += -_gcc=-Wno-uninitialized
 CERRWARN += -_gcc=-Wno-switch
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 YYCFLAGS =
 LDLIBS += -lgen -lproc -lrtld_db -lnsl -lsocket -lctf -lelf -lc -lzonecfg

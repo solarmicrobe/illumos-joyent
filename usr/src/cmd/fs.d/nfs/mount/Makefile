@@ -44,7 +44,7 @@ CERRWARN += -_gcc=-Wno-address
 CERRWARN += -_gcc=-Wno-unused-function
 
 # unknown type for func
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 #
 # Message catalog

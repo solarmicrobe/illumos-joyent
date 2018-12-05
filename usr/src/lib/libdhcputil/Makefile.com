@@ -50,7 +50,7 @@ CERRWARN +=	-_gcc=-Wno-uninitialized
 CPPFLAGS +=	-I$(COMDIR)
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

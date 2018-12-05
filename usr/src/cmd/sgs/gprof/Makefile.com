@@ -47,7 +47,7 @@ LINTFLAGS +=	-x
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 CLEANFILES +=	$(LINTOUTS)
 

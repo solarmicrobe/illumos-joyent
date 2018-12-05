@@ -35,7 +35,7 @@ CFLAGS +=	$(CCVERBOSE)
 LDLIBS +=	-lproject
 
 # main() too hairy
-CERRWARN +=	$(DISABLE_SMATCH)
+SMATCH =	off
 
 .KEEP_STATE:
 

@@ -66,7 +66,7 @@ pmain.o	:= CERRWARN += -_gcc=-Wno-implicit-function-declaration
 pmain.o	:= CERRWARN += -erroff=E_NO_IMPLICIT_DECL_ALLOWED
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

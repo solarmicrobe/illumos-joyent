@@ -43,7 +43,7 @@ CERRWARN +=	-_gcc=-Wno-uninitialized
 CERRWARN +=	-_gcc=-Wno-address
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 POFILE = 	$(PROG)_all.po
 LDLIBS +=	-lidmap -ladutils -lsldap -lldap

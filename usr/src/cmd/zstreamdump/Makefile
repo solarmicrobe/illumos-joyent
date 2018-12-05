@@ -49,7 +49,7 @@ LINTFLAGS64 += -xerroff=E_NAME_DEF_NOT_USED2
 CERRWARN += -_gcc=-Wno-switch
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

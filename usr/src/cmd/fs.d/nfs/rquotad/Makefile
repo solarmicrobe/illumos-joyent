@@ -40,7 +40,7 @@ CERRWARN += -_gcc=-Wno-unused-variable
 LDLIBS += -lnsl
 
 # unknown type for func
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 $(TYPEPROG):	$(OBJS)
 		$(LINK.c) -o $@ $(LDLIBS) $(OBJS)

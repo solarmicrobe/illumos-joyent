@@ -51,7 +51,7 @@ CERRWARN += -_gcc=-Wno-parentheses
 LDLIBS += -ldhcpagent -lsocket -lnsl -lkstat -ltsnet -ltsol
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

@@ -44,7 +44,7 @@ CERRWARN +=	-_gcc=-Wno-unused-variable
 CERRWARN +=	-_gcc=-Wno-unused-function
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 lint:		lint_PROG
 

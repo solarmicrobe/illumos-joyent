@@ -42,7 +42,7 @@ CMDS = $(SRCS:%=$(ROOTBIN)/%)
 CERRWARN += -_gcc=-Wno-implicit-function-declaration
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 $(CMDS) := FILEMODE = 0555
 

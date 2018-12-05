@@ -44,7 +44,7 @@ CFLAGS +=	$(CCVERBOSE)
 LDLIBS +=	-lnvpair -lc
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 $(LINTLIB) :=	SRCS = ../llib-lsysevent
 

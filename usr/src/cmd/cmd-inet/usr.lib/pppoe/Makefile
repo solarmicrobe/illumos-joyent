@@ -34,7 +34,7 @@ DAEMON_OBJS=	pppoed.o options.o logging.o common.o
 CPPFLAGS +=	-I$(SRC)/uts/common
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

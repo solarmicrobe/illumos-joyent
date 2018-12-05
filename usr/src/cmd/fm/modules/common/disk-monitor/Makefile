@@ -38,4 +38,4 @@ LDFLAGS += -L$(ROOT)/usr/lib/fm -R/usr/lib/fm
 CERRWARN += -_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off

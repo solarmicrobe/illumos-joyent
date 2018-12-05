@@ -44,7 +44,7 @@ CPPFLAGS +=	-DMDNS_VERSIONSTR_NODTS
 pics/dnssd_clientstub.o := CERRWARN +=	-_gcc=-Wno-unused-but-set-variable
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 PARALLEL =     $(OBJECTS)
 .KEEP_STATE:

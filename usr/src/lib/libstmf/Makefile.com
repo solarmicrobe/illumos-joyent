@@ -45,7 +45,7 @@ CPPFLAGS +=	$(INCS) -D_REENTRANT
 CERRWARN +=	-_gcc=-Wno-unused-label
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 $(LINTLIB) := SRCS=	$(SRCDIR)/$(LINTSRC)
 

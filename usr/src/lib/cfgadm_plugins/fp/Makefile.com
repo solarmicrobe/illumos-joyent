@@ -52,7 +52,7 @@ CERRWARN +=	-_gcc=-Wno-switch
 CERRWARN +=	-_gcc=-Wno-address
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 CPPFLAGS += -D_POSIX_PTHREAD_SEMANTICS
 

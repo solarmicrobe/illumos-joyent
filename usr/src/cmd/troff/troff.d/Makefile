@@ -52,7 +52,7 @@ CERRWARN +=	-_gcc=-Wno-uninitialized
 CERRWARN +=	-_gcc=-Wno-extra
 
 # unknown type for func
-CERRWARN +=	$(DISABLE_SMATCH)
+SMATCH =	off
 
 #
 # For message catalog

@@ -45,7 +45,7 @@ $(OBJS) :=	CPPFLAGS +=	$(_D_UNIX98_EXTN)
 LINTFLAGS +=	$(_D_UNIX98_EXTN)
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 # in.ripngd uses the ancillary data feature which is available only through
 # UNIX 98 standards version of Socket interface. This interface is supposed to

@@ -70,7 +70,7 @@ CERRWARN +=	-_gcc=-Wno-clobbered
 CERRWARN +=	-_gcc=-Wno-switch
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 CPPFLAGS +=	-I$(SRCDIR) -D_FILE_OFFSET_BITS=64
 

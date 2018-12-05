@@ -47,7 +47,7 @@ DEFS= -DCM_N -DCM_GT -DCM_B -DCM_D
 CPPFLAGS = $(DEFS) -I$(SRC)/ucbhead $(CPPFLAGS.master)
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

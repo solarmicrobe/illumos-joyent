@@ -32,7 +32,7 @@ $(RELEASE_BUILD) CPPFLAGS += -DNDEBUG
 CERRWARN +=	-_gcc=-Wno-unused-label
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 CLEANFILES	= $(OBJS) parser.tab.c parser.tab.h
 CLOBBERFILES	= $(PROG) $(POFILE)

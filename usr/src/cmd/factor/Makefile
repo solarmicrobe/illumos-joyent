@@ -32,7 +32,7 @@ LDLIBS += -lm
 CERRWARN += -_gcc=-Wno-implicit-function-declaration
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

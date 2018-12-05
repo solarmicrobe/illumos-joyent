@@ -34,7 +34,7 @@ CERRWARN += -_gcc=-Wno-parentheses
 CERRWARN += -_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LDLIBS += -lsec -lcmdutils -lnvpair
 XGETFLAGS += -a -x cpio.xcl

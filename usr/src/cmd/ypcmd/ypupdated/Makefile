@@ -57,7 +57,7 @@ CERRWARN +=		-_gcc=-Wno-implicit-function-declaration
 CERRWARN +=		-_gcc=-Wno-unused-variable
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 CLOBBERFILES += ypupdated_prot.h
 

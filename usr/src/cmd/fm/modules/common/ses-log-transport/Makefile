@@ -35,4 +35,4 @@ LDLIBS += -L$(ROOTLIB)/fm -ltopo -lseslog
 LDFLAGS += -R/usr/lib/fm
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off

@@ -66,7 +66,7 @@ CERRWARN += -_gcc=-Wno-parentheses
 CERRWARN += -_gcc=-Wno-unused-function
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 ksetpw:=	LDFLAGS += $(KRUNPATH)
 kdyndns:=	LDFLAGS += -R/usr/lib/smbsrv

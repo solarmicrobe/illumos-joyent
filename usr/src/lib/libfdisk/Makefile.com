@@ -56,7 +56,7 @@ LINTFLAGS64 +=    -erroff=E_BAD_PTR_CAST_ALIGN
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

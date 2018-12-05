@@ -33,4 +33,8 @@ CERRWARN += $(SMATCH_ARGS:%=-_smatch=%)
 
 CERRWARN += $(SMOFF:%=-_smatch=--disable=%)
 
-DISABLE_SMATCH = -_smatch=off
+SMATCH_ =
+SMATCH_on =
+SMATCH_off = -_smatch=off
+
+CERRWARN += $(SMATCH_$(SMATCH))

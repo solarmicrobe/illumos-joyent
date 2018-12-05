@@ -39,7 +39,7 @@ CFLAGS	+=	$(CCVERBOSE)
 LDLIBS	+=	-ladm
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 lint		:=	PROG= $(LIBPROG)
 

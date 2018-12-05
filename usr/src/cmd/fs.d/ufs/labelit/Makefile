@@ -34,7 +34,7 @@ include		../../Makefile.fstype
 CPPFLAGS +=	-D_LARGEFILE64_SOURCE
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 lint :=		PROG=$(LIBPROG)
 

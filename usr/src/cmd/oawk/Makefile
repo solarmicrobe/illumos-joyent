@@ -71,7 +71,7 @@ CERRWARN +=	-_gcc=-Wno-extra
 CERRWARN +=	-_gcc=-Wno-parentheses
 
 # missing type declarations
-CERRWARN +=	$(DISABLE_SMATCH)
+SMATCH =	off
 
 .KEEP_STATE :
 

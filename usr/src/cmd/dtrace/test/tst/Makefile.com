@@ -68,7 +68,7 @@ CERRWARN +=	-_gcc=-Wno-unused-function
 CERRWARN +=	-_gcc=-Wno-unused-variable
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 all: $(EXES)
 

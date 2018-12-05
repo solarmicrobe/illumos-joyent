@@ -63,7 +63,7 @@ CERRWARN += -_gcc=-Wno-uninitialized
 CERRWARN += -_gcc=-Wno-address
 
 # way too old
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 #
 # For message catalogue files

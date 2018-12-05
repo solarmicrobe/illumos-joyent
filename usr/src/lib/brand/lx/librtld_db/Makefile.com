@@ -59,7 +59,7 @@ CPPFLAGS +=	-D_REENTRANT -I../ -I$(UTSBASE)/common/brand/lx \
 			-I$(SRC)/cmd/sgs/include/$(MACH)
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 ROOTLIBDIR =	$(ROOT)/usr/lib/brand/lx
 ROOTLIBDIR64 =	$(ROOT)/usr/lib/brand/lx/$(MACH64)

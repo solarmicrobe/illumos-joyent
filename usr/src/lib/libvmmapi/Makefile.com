@@ -33,7 +33,7 @@ CPPFLAGS	= -I$(COMPAT)/freebsd -I$(CONTRIB)/freebsd \
 	$(CPPFLAGS.master) -I$(SRC)/uts/i86pc
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 $(LINTLIB) :=	SRCS = $(SRCDIR)/$(LINTSRC)
 

@@ -39,7 +39,7 @@ DIRS=		$(ROOTDATADIR)
 CERRWARN +=	-_gcc=-Wno-implicit-function-declaration
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 FILEMODE=	755
 

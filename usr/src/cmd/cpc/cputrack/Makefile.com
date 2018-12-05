@@ -36,7 +36,7 @@ CFLAGS64 +=	$(CCVERBOSE) $(CTF_FLAGS)
 CPPFLAGS +=	-I$(SRC)/lib/libcpc/common
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LINTFLAGS +=	-u
 LINTFLAGS64 +=	-u

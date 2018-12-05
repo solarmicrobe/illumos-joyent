@@ -43,4 +43,4 @@ include		../../Makefile.mount.targ
 CERRWARN +=	-_gcc=-Wno-unused-variable
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off

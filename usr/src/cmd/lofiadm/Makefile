@@ -42,7 +42,7 @@ CERRWARN += -_gcc=-Wno-parentheses
 CERRWARN += -_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LINTFLAGS += -erroff=E_NAME_USED_NOT_DEF2
 

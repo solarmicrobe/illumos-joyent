@@ -50,7 +50,7 @@ LDLIBS += -lm
 CLEANFILES= awk.c y.tab.h
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 # for messaging catalog
 

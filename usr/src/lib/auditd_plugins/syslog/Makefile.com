@@ -52,7 +52,7 @@ CERRWARN	+= -_gcc=-Wno-char-subscripts
 CERRWARN	+= -_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 ROOTLIBDIR=	$(ROOT)/usr/lib/security
 

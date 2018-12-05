@@ -76,7 +76,7 @@ CERRWARN +=	-_gcc=-Wno-address
 CERRWARN +=	-_gcc=-Wno-unused-function
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LDLIBS +=	-lnsl
 chkey :=	LDLIBS += -lsldap

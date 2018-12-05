@@ -56,7 +56,7 @@ CFLAGS +=	$(CCVERBOSE)
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 $(LINTLIB) :=	LINTFLAGS = -nvx -I..
 $(LINTLIB) :=	LINTFLAGS64 = -nvx -m64 -I..

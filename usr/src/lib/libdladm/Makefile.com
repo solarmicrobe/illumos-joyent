@@ -51,7 +51,7 @@ CERRWARN +=	-_gcc=-Wno-uninitialized
 CPPFLAGS +=	-I$(SRCDIR) -D_REENTRANT
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 C99MODE=	-xc99=%all
 C99LMODE=	-Xc99=%all

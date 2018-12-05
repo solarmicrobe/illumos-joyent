@@ -46,7 +46,7 @@ CERRWARN +=	-_gcc=-Wno-uninitialized
 CERRWARN +=	-_gcc=-Wno-clobbered
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 UFSROOTETC=		$(ROOT)/etc
 UFSROOTUSR=		$(ROOT)/usr

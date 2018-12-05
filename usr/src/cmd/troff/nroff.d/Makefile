@@ -46,7 +46,7 @@ CERRWARN +=	-_gcc=-Wno-implicit-function-declaration
 CERRWARN +=	-_gcc=-Wno-parentheses
 CERRWARN +=	-_gcc=-Wno-unused-variable
 
-CERRWARN +=	$(DISABLE_SMATCH)
+SMATCH =	off
 
 LDLIBS +=	-lmapmalloc
 #

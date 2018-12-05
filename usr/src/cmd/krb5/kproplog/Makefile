@@ -39,7 +39,7 @@ CERRWARN	+=	-_gcc=-Wno-unused-function
 CERRWARN	+=	-_gcc=-Wno-implicit-function-declaration
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 all:		$(PROG)
 

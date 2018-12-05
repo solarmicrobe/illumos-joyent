@@ -46,7 +46,7 @@ LDFLAGS += -R/usr/lib/fm
 LINTFLAGS += -mnu
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .NO_PARALLEL:
 .PARALLEL: $(OBJS) $(LINTFILES)

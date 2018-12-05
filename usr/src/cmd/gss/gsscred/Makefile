@@ -48,7 +48,7 @@ ROOTBINPROG=		$(BINPROG:%=$(ROOTBIN)/%)
 COPTFLAG += $(XESS) $(INCDIRS) $(LIBPATH)
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LDLIBS += -lgss
 

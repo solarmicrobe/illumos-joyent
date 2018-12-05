@@ -65,8 +65,8 @@ CFLAGS		+= -_gcc=-fno-strict-overflow
 CFLAGS64	+= -_gcc=-fno-strict-overflow
 
 # sparse currently has no _Complex support
-CFLAGS		+= $(DISABLE_SMATCH)
-CFLAGS64	+= $(DISABLE_SMATCH)
+CFLAGS		+= -_smatch=off
+CFLAGS64	+= -_smatch=off
 
 $(DYNLIB) 	:= LDLIBS += -lc
 

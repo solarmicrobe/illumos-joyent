@@ -63,7 +63,7 @@ CERRWARN += -_gcc=-Wno-unused-variable
 CERRWARN += -_gcc=-Wno-extra
 
 # too many untyped funcs
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 util1.o := CPPFLAGS += -DSAC
 util2.o := CPPFLAGS += -USAC

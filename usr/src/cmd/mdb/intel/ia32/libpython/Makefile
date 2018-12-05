@@ -49,7 +49,7 @@ include ../../../Makefile.module
 LINTFLAGS += -erroff=E_MACRO_REDEFINED
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 dmod/$(MODULE) := LDLIBS += -lproc
 

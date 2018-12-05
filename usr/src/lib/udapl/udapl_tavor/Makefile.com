@@ -154,7 +154,7 @@ CERRWARN +=	-_gcc=-Wno-uninitialized
 CERRWARN +=	-_gcc=-Wno-switch
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 $(NOT_RELEASE_BUILD)CPPFLAGS += -DDAPL_DBG
 debug := COPTFLAG = -g

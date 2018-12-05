@@ -48,7 +48,7 @@ $(NOT_RELEASE_BUILD)CPPFLAGS += -DDEBUG
 CERRWARN += -_gcc=-Wno-switch
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LINTFLAGS += -mu
 CSTD =       $(CSTD_GNU99)

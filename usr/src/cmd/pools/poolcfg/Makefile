@@ -48,7 +48,7 @@ XGETFLAGS =	-a
 CLOBBERFILES +=	poolcfg_lex.c poolcfg_grammar.c poolcfg_grammar.h
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

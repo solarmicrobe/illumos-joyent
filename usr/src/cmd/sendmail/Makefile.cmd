@@ -39,7 +39,7 @@ CERRWARN +=	-_gcc=-Wno-unused-but-set-variable
 DBMDEF=		-DNDBM -DNEWDB -DNIS -DUSERDB -DMAP_REGEX -DLDAPMAP
 
 # smatch can't handle main()
-CERRWARN +=	$(DISABLE_SMATCH)
+SMATCH =	off
 
 ROOTLIBSMTPSM = $(ROOTLIB)/smtp/sendmail
 

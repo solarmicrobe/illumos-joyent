@@ -56,7 +56,7 @@ CERRWARN +=	-_gcc=-Wno-clobbered
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 ROOTSYMLINK=	$(ROOT)/usr/ucb/$(PROG)
 

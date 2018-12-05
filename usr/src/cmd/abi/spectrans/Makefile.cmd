@@ -40,7 +40,7 @@ LDFLAGS	+=	-L$(U_DIR)
 LINTFLAGS +=	-xsuF -errtags=yes
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LDLIBS	+=	-l$(U_LIB) -lgen
 LINTLIBS =	-L$(U_DIR) -l$(U_LIB)

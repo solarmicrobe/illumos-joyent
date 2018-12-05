@@ -52,7 +52,7 @@ $(POFILE):      clear_locks.c
 CFLAGS		+=	$(CCVERBOSE)
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

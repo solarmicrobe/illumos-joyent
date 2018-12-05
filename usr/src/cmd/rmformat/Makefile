@@ -38,7 +38,7 @@ LDLIBS +=	-lsmedia -lvolmgt -ladm -lefi
 CERRWARN += -_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LINTFLAGS += -u
 CPPFLAGS += -D_FILE_OFFSET_BITS=64

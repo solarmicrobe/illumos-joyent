@@ -34,7 +34,7 @@ CERRWARN +=	-_gcc=-Wno-parentheses
 CERRWARN +=	-_gcc=-Wno-clobbered
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 ROOTSEC =	$(ROOTETC)/security
 ROOTSECDEV =	$(ROOTSEC)/dev

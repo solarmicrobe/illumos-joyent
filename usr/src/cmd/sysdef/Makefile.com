@@ -34,7 +34,7 @@ LDLIBS	+= -ldevinfo -lelf
 CERRWARN += -_gcc=-Wno-parentheses
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 FILEMODE= 02555
 

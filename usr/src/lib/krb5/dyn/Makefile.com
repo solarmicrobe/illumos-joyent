@@ -23,7 +23,7 @@
 # Use is subject to license terms.
 #
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 
 LIBRARY= libdyn.a

@@ -38,7 +38,7 @@ $(PROG) lint 	:= LDLIBS += -lscf -lnsl
 CERRWARN	+= -_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 CPPFLAGS	+= -D_POSIX_PTHREAD_SEMANTICS -D_REENTRANT
 CFLAGS		+= -DNDEBUG

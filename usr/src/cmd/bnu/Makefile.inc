@@ -49,7 +49,7 @@ CERRWARN	+= -_gcc=-Wno-extra
 CERRWARN	+= -_gcc=-Wno-implicit-function-declaration
 
 # "missing type for func"
-CERRWARN	+= $(DISABLE_SMATCH)
+SMATCH		= off
 
 TLILIB =	-lnsl -lsocket
 PAMLIB =        -lpam

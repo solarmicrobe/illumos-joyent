@@ -44,7 +44,7 @@ CERRWARN +=	-_gcc=-Wno-unused-label
 CERRWARN +=	-_gcc=-Wno-address
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 sparc_LDLIBS = -la5k -lg_fc -ldevid -lkstat -ldevinfo
 i386_LDLIBS =

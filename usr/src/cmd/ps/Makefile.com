@@ -36,7 +36,7 @@ CFLAGS	+= $(CCVERBOSE)
 LDLIBS += -lproject
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

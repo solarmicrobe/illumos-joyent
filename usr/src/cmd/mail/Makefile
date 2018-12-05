@@ -78,7 +78,7 @@ CERRWARN +=	-_gcc=-Wno-clobbered
 CERRWARN +=	-_gcc=-Wno-extra
 
 # missing type declarations for old-style functions
-CERRWARN +=	$(DISABLE_SMATCH)
+SMATCH =	off
 
 LDLIBS +=	-lmail -lsocket
 

@@ -62,7 +62,7 @@ LINTFLAGS += -erroff=E_NAME_DEF_NOT_USED2
 CERRWARN += -_gcc=-Wno-parentheses
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 # install specifics
 

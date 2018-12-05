@@ -56,7 +56,7 @@ CERRWARN	+= -_gcc=-Wno-parentheses
 CERRWARN	+= -_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 CLOBBERFILES	+= $(SRCDIR)/nfs_sec.c
 CLOBBERFILES	+= $(SRCDIR)/replica.c

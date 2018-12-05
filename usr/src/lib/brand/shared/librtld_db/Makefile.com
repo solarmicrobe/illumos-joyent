@@ -54,7 +54,7 @@ CPPFLAGS +=	-D_REENTRANT \
 			-I$(SRC)/cmd/sgs/include/$(MACH)
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 ROOTLIBDIR =	$(ROOT)/usr/lib/brand/$(BRAND)
 ROOTLIBDIR64 =	$(ROOT)/usr/lib/brand/$(BRAND)/$(MACH64)

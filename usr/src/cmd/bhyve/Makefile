@@ -121,7 +121,7 @@ CPPFLAGS +=	-DNO_OPENSSL
 pci_nvme.o := CERRWARN += -_gcc=-Wno-pointer-sign
 
 # main() is too hairy for smatch
-bhyvectl.o := CERRWARN += $(DISABLE_SMATCH)
+bhyvectl.o := SMATCH=off
 
 SMOFF += all_func_returns,leaks
 

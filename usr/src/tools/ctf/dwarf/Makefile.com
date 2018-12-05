@@ -79,7 +79,7 @@ CERRWARN +=	-_gcc=-Wno-unused
 CERRWARN +=	-_gcc=-Wno-implicit-function-declaration
 
 # libdwarf not clean
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LDLIBS = -lelf -lc
 

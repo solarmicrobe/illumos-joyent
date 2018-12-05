@@ -41,7 +41,7 @@ CERRWARN += -_gcc=-Wno-parentheses
 CERRWARN += -_gcc=-Wno-unused-label
 
 # nothing lintable
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 $(XPG6EXOBJS) := CFLAGS += -DXPG6
 ROOTLIBB= $(LIBB:%=$(ROOTLIB)/%)

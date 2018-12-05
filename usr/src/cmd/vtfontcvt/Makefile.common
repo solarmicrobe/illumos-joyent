@@ -24,7 +24,7 @@ OBJS	+=	$(LZ4_OBJS)
 LDLIBS += -lumem
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 %.o:	$(LZ4COMMONDIR)/%.c
 	$(COMPILE.c) $<

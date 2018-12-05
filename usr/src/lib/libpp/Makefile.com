@@ -106,7 +106,7 @@ CERRWARN	+= -_gcc=-Wno-empty-body
 CERRWARN	+= -_gcc=-Wno-unused-value
 
 # too much for smatch
-CERRWARN	+= $(DISABLE_SMATCH)
+SMATCH		= off
 
 pics/ppcall.o 		:= CERRWARN += -erroff=E_INTEGER_OVERFLOW_DETECTED
 pics/ppcontrol.o 	:= CERRWARN += -erroff=E_INTEGER_OVERFLOW_DETECTED

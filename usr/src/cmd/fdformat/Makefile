@@ -32,7 +32,7 @@ LDLIBS +=	-lvolmgt
 LINTFLAGS +=    -um
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

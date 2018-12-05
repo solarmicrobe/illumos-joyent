@@ -78,7 +78,7 @@ ASFLAGS =	-P $(ASFLAGS_$(CURTYPE)) -D_ASM -I../	\
 			-I$(UTSBASE)/common/brand/lx
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 C99MODE=	-xc99=%all
 C99LMODE=	-Xc99=%all

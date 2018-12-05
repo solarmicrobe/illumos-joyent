@@ -40,7 +40,7 @@ CPPFLAGS +=	-I$(JAVA_ROOT)/include -I$(JAVA_ROOT)/include/solaris
 CPPFLAGS +=	-D_REENTRANT
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 DYNFLAGS +=
 LDLIBS +=	-lc -lbsm

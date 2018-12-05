@@ -45,7 +45,7 @@ CPPFLAGS +=	-I$(SRCDIR)
 CERRWARN +=	-_gcc=-Wno-switch
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 MAPFILES =	$(SRCDIR)/mapfile
 

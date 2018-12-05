@@ -99,7 +99,7 @@ CERRWARN +=	-_gcc=-Wno-extra
 CERRWARN +=	-_gcc=-Wno-address
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 all:=		TARGET= all
 install:=	TARGET= install

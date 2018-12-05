@@ -41,7 +41,7 @@ CFLAGS +=	$(CCVERBOSE)
 CERRWARN +=	-_gcc=-Wno-parentheses
 CERRWARN +=	-_gcc=-Wno-uninitialized
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LDLIBS +=	-lxnet -lmd -lsocket
 CLEAN_FILES +=	$(ROUTEDOBJS) $(RTQUERYOBJS)

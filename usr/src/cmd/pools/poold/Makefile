@@ -88,7 +88,7 @@ $(BLD_JAVA_8)LINTFLAGS64 += -erroff=E_NAME_USED_NOT_DEF2
 LINTLIBS +=	-L$(LIBPOOL_PATH) -lpool
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 CPPFLAGS +=	$(INCS)
 ROOTCMDDIR =	$(ROOT)/usr/lib/pool

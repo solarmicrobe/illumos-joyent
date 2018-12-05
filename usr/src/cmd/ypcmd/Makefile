@@ -155,7 +155,7 @@ CERRWARN +=	-_gcc=-Wno-address
 CERRWARN +=	-_gcc=-Wno-unused-function
 
 # too many unknown types
-CERRWARN +=	$(DISABLE_SMATCH)
+SMATCH =	off
 
 #conditional assignments
 ypalias.o :=	CPPFLAGS= -DMAIN $(CPPFLAGS.master)

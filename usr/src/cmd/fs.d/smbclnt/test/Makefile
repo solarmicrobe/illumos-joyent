@@ -53,7 +53,7 @@ CERRWARN += -_gcc=-Wno-unused-variable
 CSTD= $(CSTD_GNU99)
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LINTFLAGS += -erroff=E_FUNC_RET_ALWAYS_IGNOR2
 

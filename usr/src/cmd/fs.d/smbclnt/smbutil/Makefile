@@ -54,7 +54,7 @@ CPPFLAGS += -I$(SRC)/lib/libsmbfs \
 	-I$(SRC)/uts/common/smbclnt -I$(SRC)/uts/common
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 # Debugging
 ${NOT_RELEASE_BUILD} CPPFLAGS += -DDEBUG

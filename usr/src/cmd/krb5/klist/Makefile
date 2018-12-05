@@ -29,7 +29,7 @@ LDLIBS += $(KMECHLIB)
 CERRWARN += -_gcc=-Wno-unused-function
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 $(GPROGS) := CPPFLAGS += -DSYSV -DSunOS=50 
 

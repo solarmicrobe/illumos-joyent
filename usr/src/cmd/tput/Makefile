@@ -37,7 +37,7 @@ XGETFLAGS += -a -x tput.xcl
 LDLIBS +=  -lcurses
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 all: $(PROG)
 

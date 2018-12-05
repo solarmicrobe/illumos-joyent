@@ -44,7 +44,7 @@ CERRWARN +=	-_gcc=-Wno-implicit-function-declaration
 CERRWARN +=	-_gcc=-Wno-type-limits
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 lint:		lint_PROG
 

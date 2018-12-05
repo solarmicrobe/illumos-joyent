@@ -31,7 +31,7 @@ include ../Makefile.cmd
 CERRWARN += -_gcc=-Wno-unused-variable
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 RELUSRSBIN=	../usr/sbin
 ROOTSYMLINK=	$(ROOTETC)/$(PROG)

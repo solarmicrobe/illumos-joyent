@@ -35,7 +35,7 @@ include ../Makefile.cmd
 CPPFLAGS += -D_FILE_OFFSET_BITS=64
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LDLIBS_i386= -lfdisk
 LDLIBS_sparc=

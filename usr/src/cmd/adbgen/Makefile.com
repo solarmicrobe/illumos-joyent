@@ -40,7 +40,7 @@ include ../../Makefile.cmd
 include ../../Makefile.targ
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 ROOTADBDIR32	= $(ROOT)/usr/lib/adb
 ROOTADBDIR64	= $(ROOT)/usr/lib/adb/$(MACH64)

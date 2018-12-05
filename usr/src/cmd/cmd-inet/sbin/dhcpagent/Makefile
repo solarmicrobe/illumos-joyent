@@ -43,7 +43,7 @@ CERRWARN += -_gcc=-Wno-switch
 CERRWARN += -_gcc=-Wno-parentheses
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 #
 # to compile a debug version, do a `make COPTFLAG="-g -XO0"'

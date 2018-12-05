@@ -53,7 +53,7 @@ CPPFLAGS +=	-I../../libpapi-common/common
 CERRWARN +=	-_gcc=-Wno-unused-variable
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 MAPFILES =	$(SRCDIR)/mapfile
 

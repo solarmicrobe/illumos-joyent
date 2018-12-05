@@ -36,7 +36,7 @@ SRCS=		$(LIBPROG).c
 CFLAGS += $(CCVERBOSE)
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LDLIBS +=	-lnsl -lsocket
 

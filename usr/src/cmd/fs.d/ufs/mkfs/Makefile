@@ -44,7 +44,7 @@ CERRWARN +=	-_gcc=-Wno-empty-body
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
 # can't hack main() !
-CERRWARN +=	$(DISABLE_SMATCH)
+SMATCH =	off
 
 # for messaging catalog
 #

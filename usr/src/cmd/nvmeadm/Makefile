@@ -30,7 +30,7 @@ LDLIBS +=	-ldevinfo
 CSTD=	$(CSTD_GNU99)
 
 # error: cannot size expression
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 all: $(PROG)
 

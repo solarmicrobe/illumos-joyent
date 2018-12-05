@@ -62,7 +62,7 @@ LINTFLAGS64 +=	-x
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 BLTDEFS =	msg.h
 BLTDATA =	msg.c

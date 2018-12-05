@@ -39,7 +39,7 @@ CERRWARN +=	-_gcc=-Wno-parentheses
 lint:		lint_PROG
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 $(ROOTUSRSBIN)/$(LIBPROG):
 		-$(RM) $@; $(SYMLINK) $(LINKVALUE) $@

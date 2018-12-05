@@ -45,7 +45,7 @@ CERRWARN +=	-_gcc=-Wno-parentheses
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LOCAL=		sm_svc.o sm_proc.o sm_statd.o
 OBJS=		$(LOCAL) selfcheck.o daemon.o smfcfg.o

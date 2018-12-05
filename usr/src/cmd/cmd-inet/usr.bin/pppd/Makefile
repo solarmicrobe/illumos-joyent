@@ -54,7 +54,7 @@ CLOBBERFILES +=	mschap_test
 CERRWARN +=	-_gcc=-Wno-uninitialized
 
 # can't parse
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 # This is used *only* for testing the portability of the libraries
 # required for MS-CHAPv1.  It is not needed in any normal system and

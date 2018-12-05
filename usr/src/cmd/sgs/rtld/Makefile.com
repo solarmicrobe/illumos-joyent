@@ -91,7 +91,7 @@ CERRWARN +=	-_gcc=-Wno-unused-variable
 CERRWARN +=	-_gcc=-Wno-switch
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 # These definitions require that libc be built in the same workspace
 # as the run-time linker and before the run-time linker is built.

@@ -43,7 +43,7 @@ CERRWARN +=	-_gcc=-Wno-switch
 CERRWARN +=	-_gcc=-Wno-extra
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 $(TYPEPROG):	$(OBJS)
 		$(CC) -o $@ $(OBJS) $(LDFLAGS) $(LDLIBS)

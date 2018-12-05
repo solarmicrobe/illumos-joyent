@@ -50,7 +50,7 @@ POFILES = fcinfo.po fcinfo-list.po fcadm-list.po printAttrs.po fcoeadm.po
 CERRWARN += -_gcc=-Wno-unused-variable
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 ROOTMANIFESTDIR=	$(ROOTSVCNETWORK)
 

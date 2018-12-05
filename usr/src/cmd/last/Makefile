@@ -33,7 +33,7 @@ ETCTOVARADM= ../var/adm
 include ../Makefile.cmd
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 $(ROOTUTMPS):= FILEMODE= 644
 

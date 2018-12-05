@@ -45,7 +45,7 @@ CERRWARN +=	-_gcc=-Wno-implicit-function-declaration
 CERRWARN +=	-_gcc=-Wno-parentheses
 
 # unknown type for func
-CERRWARN +=	$(DISABLE_SMATCH)
+SMATCH =	off
 
 $(LIBPROG):	$(OBJS)
 		$(LINK.c) -o $@ $(OBJS) $(LDLIBS)

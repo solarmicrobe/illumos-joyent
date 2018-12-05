@@ -33,7 +33,7 @@ CERRWARN += -_gcc=-Wno-parentheses
 CERRWARN += -_gcc=-Wno-implicit-function-declaration
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LIBUNITTAB= $(UNITTAB:%=$(ROOTSHLIB)/%)
 $(LIBUNITTAB) :=	FILEMODE =	$(LIBFILEMODE)

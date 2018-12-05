@@ -46,7 +46,7 @@ CERRWARN += -_gcc=-Wno-implicit-function-declaration
 CERRWARN += -_gcc=-Wno-unused-variable
 
 # way too old
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 POFILE= misc.po
 

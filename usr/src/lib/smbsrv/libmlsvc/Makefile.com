@@ -95,7 +95,7 @@ CERRWARN += -_gcc=-Wno-unused-function
 CERRWARN += -_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 
 SRCS=   $(OBJS_COMMON:%.o=$(SRCDIR)/%.c)

@@ -53,7 +53,7 @@ CERRWARN += -_gcc=-Wno-empty-body
 CERRWARN += -_gcc=-Wno-uninitialized
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LDLIBS += -last
 msgcpp   := LDLIBS += -lpp

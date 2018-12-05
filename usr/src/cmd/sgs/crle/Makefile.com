@@ -41,7 +41,7 @@ MAPFILE=	$(MAPFILE.NGB)
 MAPOPT=		$(MAPFILE:%=-M%)
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 CPPFLAGS +=	-I$(SRC)/common/sgsrtcid -I$(SRCBASE)/uts/$(ARCH)/sys \
 		-D__EXTENSIONS__

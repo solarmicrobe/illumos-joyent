@@ -36,7 +36,7 @@ CERRWARN += -_gcc=-Wno-unused-label
 CERRWARN += -_gcc=-Wno-extra
 
 # "missing type for func"
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 MAPFILES =	../mapfile-intf $(MAPFILE.NGB)
 LDFLAGS +=	$(MAPFILES:%=-M%)

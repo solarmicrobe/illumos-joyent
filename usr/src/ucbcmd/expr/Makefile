@@ -34,7 +34,7 @@ CERRWARN +=	-_gcc=-Wno-extra
 CERRWARN +=	-_gcc=-Wno-char-subscripts
 
 # missing function prototypes
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LDFLAGS +=	$(MAPFILE.NGB:%=-M%)
 

@@ -38,7 +38,7 @@ CPPFLAGS = -I$(INC1) $(CPPFLAGS.master)
 CERRWARN += -_gcc=-Wno-implicit-function-declaration
 
 # missing prototypes
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 .KEEP_STATE:
 

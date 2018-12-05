@@ -42,7 +42,7 @@ CPPFLAGS +=	-D_REENTRANT
 CPPFLAGS +=	-DMDNS_VERSIONSTR_NODTS
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LDLIBS +=	-lc -lsocket -ldns_sd
 

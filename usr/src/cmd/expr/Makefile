@@ -40,7 +40,7 @@ CFLAGS += $(CCVERBOSE)
 CERRWARN += -_gcc=-Wno-uninitialized
 CERRWARN += -_gcc=-Wno-extra
 # "missing type for func"
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 $(XPG4) := CFLAGS += -DXPG4
 $(XPG6) := CFLAGS += -DXPG6
 

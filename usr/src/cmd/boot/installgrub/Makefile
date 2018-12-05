@@ -41,7 +41,7 @@ CPPFLAGS += -I$(SRC)/uts/i86pc -I$(SRC)/uts/intel -I$(SRC)/uts/common
 CPPFLAGS += -I$(SRC)/common/util
 
 # not linted
-CERRWARN += $(DISABLE_SMATCH)
+SMATCH=off
 
 LDLIBS += -lmd5
 
