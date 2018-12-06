@@ -46,6 +46,9 @@ variable debug_state
 
 also menu-namespace also menu-command-helpers
 
+\ PATH_MAX + 6
+create chaincmd 1030 chars allot
+
 \ Place string into an allocated buffer
 \
 \ e.g
@@ -75,7 +78,7 @@ also menu-namespace also menu-command-helpers
 
 \
 \ Boot from ipxe kernel
-\ Used by Joyent Triton
+\ Used by Joyent Triton when booted in BIOS/CSM mode
 \
 : ipxe_boot ( N -- NOTREACHED )
 	dup
@@ -83,6 +86,16 @@ also menu-namespace also menu-command-helpers
 	s" ipxe-archive" getenv s" boot_archive" set-module-path
 	s" boot_archive.hash" disable-module
 	0 boot ( state -- )
+;
+
+\
+\ Chainload the ipxe EFI binary
+\ Used by Joyent Triton when booted in UEFI mode
+\
+: ipxe_chainload ( N -- NOTREACHED )
+	s" chain " chaincmd place
+	s" ipxe-efi" getenv chaincmd append
+	chaincmd count evaluate
 ;
 
 \
