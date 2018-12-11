@@ -76,6 +76,12 @@ LINTTAGS	+= -erroff=E_ZERO_OR_NEGATIVE_SUBSCRIPT
 
 CERRWARN	+= -_gcc=-Wno-empty-body
 
+# 3rd party code
+SMOFF += all_func_returns
+
+# needs work
+$(OBJS_DIR)/vmm_sol_dev.o := SMOFF += signed_integer_overflow_check
+
 # These sources only compile with gcc.  Workaround a confluence of cruft
 # regarding dmake and shadow compilation by neutering the sun compiler.
 #amd64_CC	= $(ONBLD_TOOLS)/bin/$(MACH)/cw -_gcc

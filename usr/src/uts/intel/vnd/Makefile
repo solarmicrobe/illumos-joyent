@@ -38,6 +38,9 @@ LDFLAGS		+= -dy -Nmisc/neti -Nmisch/hook -Nfs/dev -Nmisc/gsqueue
 #
 CERRWARN	+= -_gcc=-Wno-unused-function
 
+# needs work
+SMOFF += or_vs_and
+
 .KEEP_STATE:
 
 def:		$(DEF_DEPS)

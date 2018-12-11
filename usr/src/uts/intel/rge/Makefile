@@ -71,6 +71,9 @@ LINTTAGS	+= -erroff=E_BAD_PTR_CAST_ALIGN
 CERRWARN	+= -_gcc=-Wno-switch
 CERRWARN	+= -_gcc=-Wno-uninitialized
 
+# looks like a real bug in rge_phy_update() !
+$(OBJS_DIR)/rge_chip.o := SMOFF += indenting
+
 #
 #	Default build targets.
 #

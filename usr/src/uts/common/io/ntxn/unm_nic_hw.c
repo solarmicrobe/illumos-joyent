@@ -1859,10 +1859,10 @@ unm_nic_set_promisc_mode(struct unm_adapter_s *adapter)
 			break;
 	}
 
-if (!ret)
-	adapter->promisc = 1;
+	if (!ret)
+		adapter->promisc = 1;
 
-		return (ret);
+	return (ret);
 }
 
 int

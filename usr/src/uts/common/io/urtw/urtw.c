@@ -190,7 +190,7 @@ usb_match_device(struct urtw_type *tbl, uint32_t nentries,
 		uint16_t tproduct = tbl[nentries].dev.p;
 		if (tbl[nentries].dev.v == vendor &&
 		    (tproduct == product || tproduct == USB_PRODUCT_ANY))
-		return (&tbl[nentries]);
+			return (&tbl[nentries]);
 	}
 	return (NULL);
 }

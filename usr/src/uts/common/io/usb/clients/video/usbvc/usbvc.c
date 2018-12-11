@@ -1337,8 +1337,8 @@ usbvc_pwrlvl0(usbvc_state_t *usbvcp)
 	case USB_DEV_ONLINE:
 		/* Deny the powerdown request if the device is busy */
 		if (usbvcp->usbvc_pm->usbvc_pm_busy != 0) {
-		USB_DPRINTF_L2(PRINT_MASK_PM, usbvcp->usbvc_log_handle,
-		    "usbvc_pwrlvl0: usbvc_pm_busy");
+			USB_DPRINTF_L2(PRINT_MASK_PM, usbvcp->usbvc_log_handle,
+			    "usbvc_pwrlvl0: usbvc_pm_busy");
 
 			return (USB_FAILURE);
 		}
