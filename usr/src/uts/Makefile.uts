@@ -235,10 +235,6 @@ include $(SRC)/Makefile.smatch
 # so we have to disable all these smatch checks.
 #
 SMOFF += sizeof
-#
-# smatch doesn't yet understand /* FALLTHROUGH */
-#
-SMOFF += missing_break
 
 CSTD = $(CSTD_GNU99)
 

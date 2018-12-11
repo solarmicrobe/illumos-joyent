@@ -35,7 +35,7 @@ KCMDPROGS=	rcp rlogin rsh
 
 SUBDIRS=	chat dns-sd ftp nc nca netstat \
 		pppd pppdump pppstats rdist talk telnet tftp
-SUBDIR1=	talk 
+SUBDIR1=	talk
 MSGSUBDIRS=	nca talk
 
 # As programs get lint-clean, add them here.  Eventually.
@@ -76,6 +76,8 @@ CERRWARN +=	-_gcc=-Wno-parentheses
 CERRWARN +=	-_gcc=-Wno-uninitialized
 CERRWARN +=	-_gcc=-Wno-unused-function
 
+ruptime :=     SMOFF += leaks
+
 # Eventually just plain CFLAGS should be += -v, but not until all in
 # PROGS are lint clean.
 $(LINTCLEAN)	:=	CFLAGS += $(CCVERBOSE)
@@ -90,9 +92,6 @@ rdate lint-rdate:=	LDLIBS += -lsocket
 rlogin lint-rlogin :=	LDLIBS += -lnsl -lsocket
 rsh lint-rsh :=		LDLIBS += -lsocket
 whois lint-whois :=	LDLIBS += -lsocket
-
-rcp :=		SMOFF += missing_break
-ruptime :=	SMOFF += leaks
 
 include  $(SRC)/lib/gss_mechs/mech_krb5/Makefile.mech_krb5
 $(KCMDPROGS)	:=	LDLIBS += -lnsl -lmech_krb5
@@ -152,7 +151,7 @@ $(COMMONOBJS): $(COMMONSRCS)
 rlogin: rlogin.o $(COMMONOBJS)
 	$(LINK.c) $@.o $(COMMONOBJS) -o $@ $(LDLIBS)
 	$(POST_PROCESS)
- 
+
 rcp: rcp.o $(COMMONOBJS)
 	$(LINK.c) $@.o $(COMMONOBJS) -o $@ $(LDLIBS)
 	$(POST_PROCESS)
@@ -160,7 +159,7 @@ rcp: rcp.o $(COMMONOBJS)
 rsh: rsh.o $(COMMONOBJS)
 	$(LINK.c) $@.o $(COMMONOBJS) -o $@ $(LDLIBS)
 	$(POST_PROCESS)
- 
+
 $(ROOTSUNWRCP):
 	$(RM) $@; $(SYMLINK) ../bin/rcp $@
 
@@ -181,7 +180,7 @@ clean_local:
 
 clobber: $(SUBDIRS) clobber_local
 clobber_local: clean_local
-	$(RM) $(CLOBBERFILES) 
+	$(RM) $(CLOBBERFILES)
 
 LINTLOCALS=	$(LINTCLEAN:%.c=lint-%)
 

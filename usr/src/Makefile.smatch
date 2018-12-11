@@ -24,10 +24,9 @@ SMATCH_ARGS += -Wno-vla
 SMATCH_ARGS += -Wno-one-bit-signed-bitfield
 # there are lots of "extern void myfunc() { ... }" around
 SMATCH_ARGS += -Wno-external-function-has-definition
-# disable warnings about e.g. "int a = 0x100000000"
-SMATCH_ARGS += -Wno-big-constants
 # we have lots of legacy "void foo();" in headers
-SMATCH_ARGS += -Wno-non-ansi-function-declaration
+SMATCH_ARGS += -Wno-old-style-definition
+SMATCH_ARGS += -Wno-strict-prototypes
 
 CERRWARN += $(SMATCH_ARGS:%=-_smatch=%)
 

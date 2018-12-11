@@ -22,7 +22,6 @@
 # Copyright 2006 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
-# Copyright (c) 2018, Joyent, Inc.
 
 LIBRARY =	libexacct.a
 VERS =		.1
@@ -44,8 +43,6 @@ $(LINTLIB) :=	SRCS = $(SRCDIR)/$(LINTSRC)
 CFLAGS += 	$(CCVERBOSE)
 CERRWARN +=	-_gcc=-Wno-uninitialized
 CPPFLAGS +=	-D_FILE_OFFSET_BITS=64
-
-SMOFF += missing_break
 
 debug :=	CPPFLAGS += -DLIBEXACCT_DEBUG
 debug :=	COPTFLAG = -g
