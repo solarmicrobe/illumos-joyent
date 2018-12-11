@@ -844,20 +844,20 @@ proto_disabmulti_req(dld_str_t *dsp, mblk_t *mp)
 	mac_perim_exit(mph);
 
 	if (err != 0) {
-	switch (err) {
-		case EINVAL:
-			dl_err = DL_BADADDR;
-			err = 0;
-			break;
+		switch (err) {
+			case EINVAL:
+				dl_err = DL_BADADDR;
+				err = 0;
+				break;
 
-		case ENOENT:
-			dl_err = DL_NOTENAB;
-			err = 0;
-			break;
+			case ENOENT:
+				dl_err = DL_NOTENAB;
+				err = 0;
+				break;
 
-		default:
-			dl_err = DL_SYSERR;
-			break;
+			default:
+				dl_err = DL_SYSERR;
+				break;
 		}
 		goto failed;
 	}

@@ -80,6 +80,9 @@ CERRWARN	+= -_gcc=-Wno-parentheses
 CERRWARN	+= -_gcc=-Wno-uninitialized
 CERRWARN	+= -_gcc=-Wno-empty-body
 
+# needs work
+SMATCH=off
+
 #
 #	Default build targets.
 #

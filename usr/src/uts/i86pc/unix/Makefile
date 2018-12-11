@@ -163,6 +163,16 @@ CERRWARN	+= -_gcc=-Wno-clobbered
 CERRWARN	+= -_gcc=-Wno-empty-body
 CERRWARN	+= -_gcc=-Wno-unused-value
 
+# false positives
+SMOFF += index_overflow
+
+# needs work
+SMOFF += all_func_returns,deref_check,signed
+
+$(OBJS_DIR)/fmsmb.o := SMOFF += indenting
+$(OBJS_DIR)/zutil.o := SMOFF += indenting
+$(OBJS_DIR)/bootrd_cpio.o := SMOFF += allocating_enough_data
+
 # Ensure that lint sees 'struct cpu' containing a fully declared
 # embedded 'struct machcpu'
 #

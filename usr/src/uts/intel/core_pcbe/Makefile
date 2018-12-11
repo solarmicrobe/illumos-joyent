@@ -120,6 +120,9 @@ include $(UTSBASE)/intel/Makefile.intel
 CERRWARN	+= -_gcc=-Wno-uninitialized
 CERRWARN	+= -_gcc=-Wno-unused-variable
 
+# needs work, seems dubious
+$(OBJS_DIR)/core_pcbe.o := SMOFF += indenting
+
 CPPFLAGS	+= -I$(UTSBASE)/intel/core_pcbe
 CLEANFILES	+= $(CPCGEN_SRCS)
 

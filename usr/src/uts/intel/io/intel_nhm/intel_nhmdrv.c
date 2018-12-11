@@ -82,8 +82,8 @@ inhm_mc_snapshot_destroy()
 			continue;
 
 		kmem_free(inhm_mc_snapshot[i], inhm_mc_snapshotsz[i]);
-			inhm_mc_snapshot[i] = NULL;
-			inhm_mc_snapshotsz[i] = 0;
+		inhm_mc_snapshot[i] = NULL;
+		inhm_mc_snapshotsz[i] = 0;
 	}
 	inhm_mc_snapshotgen++;
 }

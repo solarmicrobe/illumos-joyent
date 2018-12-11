@@ -54,6 +54,9 @@ INSTALL_TARGET	= $(BINARY) $(ROOTMODULE)
 
 LDFLAGS		+= -dy -Ndrv/audio
 
+# needs work
+$(OBJS_DIR)/ac97.o := SMOFF += index_overflow
+
 #
 #	Default build targets.
 #

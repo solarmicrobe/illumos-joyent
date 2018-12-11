@@ -10,7 +10,7 @@
 #
 
 #
-# Copyright (c) 2014, Joyent, Inc
+# Copyright (c) 2018, Joyent, Inc.
 #
 
 #
@@ -54,6 +54,9 @@ CPPFLAGS	+= -DCH_KERNELVER=270
 LDFLAGS		+= -dy
 CERRWARN	+= -_gcc=-Wno-unused-variable
 CERRWARN	+= -_gcc=-Wno-unused-function
+
+# 3rd party code
+SMOFF += indenting
 
 #
 #	Default build targets.
