@@ -34,6 +34,7 @@ DEFAULTFILES= init.dfl
 include ../Makefile.cmd
 include ../Makefile.ctf
 
+CSTD = $(CSTD_GNU99)
 LDLIBS += -lpam -lbsm -lcontract -lscf
 CERRWARN += -_gcc=-Wno-parentheses
 CERRWARN += -_gcc=-Wno-uninitialized
