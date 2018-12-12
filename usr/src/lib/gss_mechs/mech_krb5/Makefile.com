@@ -262,6 +262,9 @@ CERRWARN +=	-_gcc=-Wno-unused-value
 CERRWARN +=	-_gcc=-Wno-empty-body
 CERRWARN +=	-_gcc=-Wno-address
 
+# needs work
+SMATCH=off
+
 MAPFILES =	../mapfile-vers
 
 #CPPFLAGS += 	-D_REENTRANT

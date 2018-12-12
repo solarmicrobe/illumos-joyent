@@ -71,7 +71,7 @@ CERRWARN	+= -_gcc=-Wno-parentheses
 CERRWARN	+= -_gcc=-Wno-uninitialized
 
 # needs work
-$(OBJS_DIR)/tnf_write.o := SMOFF += all_func_returns
+$(OBJS_DIR)/tnf_writer.o := SMOFF += all_func_returns
 
 #
 #	Default build targets.

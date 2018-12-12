@@ -87,7 +87,8 @@ CFLAGS64 += \
 CERRWARN	+= -_gcc=-Wno-parentheses
 CERRWARN	+= -_gcc=-Wno-uninitialized
 
-SMOFF += all_func_returns
+# needs work
+SMOFF += all_func_returns,strcpy_overflow
 
 .KEEP_STATE:
 

@@ -90,6 +90,9 @@ LINTTAGS += -erroff=E_FUNC_RET_MAYBE_IGNORED2
 LINTTAGS += -erroff=E_CASE_FALLTHRU
 LINTTAGS += -erroff=E_ASSIGN_NARROW_CONV
 
+# needs work
+SMATCH=off
+
 #
 # Default build targets.
 #

@@ -61,6 +61,10 @@ INSTALL_TARGET	= $(BINARY) $(ROOTMODULE)
 #
 LDFLAGS		+= -dy -Nfs/procfs
 
+# false positive
+# needs work
+$(OBJS_DIR)/lxpr_vnops.o := SMOFF += strcpy_overflow
+
 #
 #	Default build targets.
 #

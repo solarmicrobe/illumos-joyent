@@ -24,6 +24,9 @@ PROGS= select_test
 
 CSTD= $(CSTD_GNU99)
 
+# needs work
+SMOFF += all_func_returns
+
 select_test: select_test.c
 	$(LINK64.c) -o $@ select_test.c $(LDLIBS64)
 	$(POST_PROCESS)
