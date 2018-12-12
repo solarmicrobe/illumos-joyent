@@ -22,6 +22,9 @@
  * Copyright (c) 2006, 2010, Oracle and/or its affiliates. All rights reserved.
  */
 
+/*
+ * Copyright (c) 2018, Joyent, Inc.
+ */
 
 /*
  * USB video class driver (usbvc(7D))

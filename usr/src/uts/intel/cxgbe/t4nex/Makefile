@@ -12,6 +12,7 @@
 #
 # Copyright (c) 2013 by Chelsio Communications, Inc. All rights reserved.
 #
+# Copyright (c) 2018, Joyent, Inc.
 
 #
 # This makefile drives the production of the Chelsio Terminator 4 10G Ethernet
