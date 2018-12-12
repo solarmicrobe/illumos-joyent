@@ -44,7 +44,8 @@ LDLIBS += -lnsl -lbsm -lscf -ltsol
 CERRWARN += -_gcc=-Wno-uninitialized
 CERRWARN += -_gcc=-Wno-parentheses
 
-SMOFF += indenting,no_if_block
+# false positives / need cleanup
+SMOFF += indenting,no_if_block,strcpy_overflow
 
 .KEEP_STATE:
 
