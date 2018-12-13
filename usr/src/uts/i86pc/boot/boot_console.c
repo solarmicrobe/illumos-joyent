@@ -33,13 +33,13 @@
 #include <sys/panic.h>
 #include <sys/ctype.h>
 #include <sys/ascii.h>
+#include <sys/vgareg.h>
 #if defined(__xpv)
 #include <sys/hypervisor.h>
 #endif /* __xpv */
 
 #include "boot_console_impl.h"
 #include "boot_serial.h"
-#include "boot_vga.h"
 
 #if defined(_BOOT)
 #include <dboot/dboot_asm.h>

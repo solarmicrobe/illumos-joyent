@@ -37,6 +37,8 @@ extern "C" {
 #define	VGA_MEM_ADDR	0xa0000
 #define	VGA_MEM_SIZE	0x20000
 
+#define	VGA_TEXT_COLS	80
+#define	VGA_TEXT_ROWS	25
 /*
  * VGA frame buffer hardware definitions.
  */
